@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d4fea;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+span,
+.primary-color {
+  background-image: linear-gradient(to right, #4f46e5, #6366f1); /* Lighter and harmonious gradient */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.primary-color:hover {
+  background-image: linear-gradient(to right, #4f46e5, #6366f1); /* Lighter and harmonious gradient */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bg-primary-color {
+  background-image: linear-gradient(to right, #4f46e5, #6366f1);
+}
+
+.blur-fil{
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.SwiperSlide {
+  background-position: center;
+  background-size: auto;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 50%;
+}
