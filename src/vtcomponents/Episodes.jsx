@@ -67,7 +67,7 @@ const Team = () => {
         <iframe
           width="250"
           height="160"
-          src="https://www.youtube.co/m/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
+          src="https://www.youtube.co/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -89,7 +89,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineDownload />
@@ -101,7 +101,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -120,7 +120,7 @@ const Team = () => {
         <iframe
           width="250"
           height="160"
-          src="https://www.youtube.co/m/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
+          src="https://www.youtube.co/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -142,7 +142,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineDownload />
@@ -154,7 +154,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -173,7 +173,7 @@ const Team = () => {
         <iframe
           width="250"
           height="160"
-          src="https://www.youtube.co/m/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
+          src="https://www.youtube.co/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -195,7 +195,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineDownload />
@@ -207,7 +207,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -226,7 +226,7 @@ const Team = () => {
         <iframe
           width="250"
           height="160"
-          src="https://www.youtube.co/m/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
+          src="https://www.youtube.co/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -248,7 +248,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineDownload />
@@ -260,7 +260,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -279,7 +279,7 @@ const Team = () => {
         <iframe
           width="250"
           height="160"
-          src="https://www.youtube.co/m/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
+          src="https://www.youtube.co/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -301,7 +301,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineDownload />
@@ -313,7 +313,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -332,7 +332,7 @@ const Team = () => {
         <iframe
           width="250"
           height="160"
-          src="https://www.youtube.co/m/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
+          src="https://www.youtube.co/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -354,7 +354,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineDownload />
@@ -366,7 +366,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -385,7 +385,7 @@ const Team = () => {
         <iframe
           width="250"
           height="160"
-          src="https://www.youtube.co/m/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
+          src="https://www.youtube.co/embed/DZLZUPyXcQA?si=psal-ng1KU_YWEXa"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -407,7 +407,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineDownload />
@@ -419,7 +419,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href="https://www.linkedin.com/in/shehan-garusingharachchi-56072a236/"
+              href=""
               role="button"
             >
               <HiOutlineInformationCircle />
