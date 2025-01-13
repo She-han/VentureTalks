@@ -17,7 +17,7 @@ const Contact = () => {
             variants={fadeIn("right", 0.1)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="rounded-lg overflow-hidden w-full h-[300px] md:h-[400px] lg:h-[400px]"
           >
             <iframe
@@ -36,7 +36,7 @@ const Contact = () => {
             variants={fadeIn("left", 0.1)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="flex flex-col justify-around p-4 bg-gray-200 dark:bg-gray-800 rounded-xl md:p-8"
           >
             <div>
