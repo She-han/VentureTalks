@@ -8,7 +8,7 @@ import Contact from '../vtcomponents/VTcontact'
 import Footer from '../vtcomponents/VTfooter'
 import Gototop from '../vtcomponents/Gototop'
 import Shorts from '../vtcomponents/Shorts'
-import Marquee from '../vtcomponents/Marquee'
+
 
 const Home = () => {
   return (

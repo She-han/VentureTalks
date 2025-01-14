@@ -157,9 +157,9 @@ const TabContent = ({ activeTab }) => {
             Organizing Committee
             </div>
             <div className="grid grid-cols-1 gap-2 md:grid-cols-2 rounded-xl">
-              <div className="overflow-hidden rounded-xl"><img src={oc1} className=""></img>
+              <div className="overflow-hidden rounded-xl"><img src={oc1} className="" alt="oc"></img>
               </div>
-              <div className="overflow-hidden rounded-xl"><img src={oc2} className=""></img>
+              <div className="overflow-hidden rounded-xl"><img src={oc2} className="" alt="oc"></img>
               </div>
             </div>
           </div>
@@ -220,13 +220,13 @@ const TabContent = ({ activeTab }) => {
   <div class="grid grid-rows-2 gap-4">
     <div class="overflow-hidden rounded-lg ">
       <img
-        src={cs1}     alt="Square Photo 1"
+        src={cs1}     alt="Square  1"
         class="w-full h-full object-cover"
       />
     </div>
     <div class="overflow-hidden rounded-lg">
       <img
-        src={cs2}     alt="Square Photo 2"
+        src={cs2}     alt="Square  2"
         class="w-full h-full object-cover"
       />
     </div>
@@ -237,21 +237,21 @@ const TabContent = ({ activeTab }) => {
     <div class="overflow-hidden rounded-lg">
       <img
         src={cs3}
-        alt="Landscape Photo 1"
+        alt="Landscape  1"
         class="w-full h-full object-cover"
       />
     </div>
     <div class="overflow-hidden rounded-lg">
       <img
         src={cs4}
-        alt="Landscape Photo 2"
+        alt="Landscape  2"
         class="w-full h-full object-cover"
       />
     </div>
     <div class="overflow-hidden rounded-lg">
       <img
         src={cs7}
-        alt="Landscape Photo 3"
+        alt="Landscape  3"
         class="w-full h-full object-cover"
       />
     </div>
@@ -260,13 +260,13 @@ const TabContent = ({ activeTab }) => {
   <div class="grid grid-rows-2 gap-4">
     <div class="overflow-hidden rounded-lg">
       <img
-        src={cs6}     alt="Square Photo 3"
+        src={cs6}     alt="Square  3"
         class="w-full h-full object-cover"
       />
     </div>
     <div class="overflow-hidden rounded-lg">
       <img
-        src={cs5}     alt="Square Photo 4"
+        src={cs5}     alt="Square  4"
         class="w-full h-full object-cover"
       />
     </div>

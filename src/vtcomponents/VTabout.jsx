@@ -34,7 +34,7 @@ const About = () => {
               <p className="w-[100%] mx-auto leading-7 text-justify text-gray-800 dark:text-gray-200 font-medium text-lg ">
               "Venture Talks," curated by the Computer Science Students’ Community (CSSC) of the University of Ruhuna, is a 10-episode podcast series featuring distinguished individuals from the tech and computer science sectors. Each hour-long episode explores their success stories, industry insights, and the latest IT advancements. Available on social media as full episodes and short snippets, the program aims to elevate the university's reputation and enrich IT enthusiasts' knowledge of the industry.
               </p>
-              <a href="/about" ></a>
+              
             </div>
 
             <div className="grid justify-center grid-cols-1 gap-2 my-12 place-items-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:gap-6 lg:gap-8">

@@ -89,7 +89,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineDownload />
@@ -101,7 +101,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -142,7 +142,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineDownload />
@@ -154,7 +154,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -195,7 +195,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineDownload />
@@ -207,7 +207,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -248,7 +248,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineDownload />
@@ -260,7 +260,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -301,7 +301,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineDownload />
@@ -313,7 +313,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -354,7 +354,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineDownload />
@@ -366,7 +366,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineInformationCircle />
@@ -407,7 +407,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineDownload />
@@ -419,7 +419,7 @@ const Team = () => {
           >
             <a
               className="hover:text-[#FD4101]"
-              href=""
+              href="/explore"
               role="button"
             >
               <HiOutlineInformationCircle />

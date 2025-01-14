@@ -8,14 +8,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { HiOutlineInformationCircle } from "react-icons/hi2";
 import { HiOutlineDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { fadeIn } from "../constants/variants";
+
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { FreeMode, Autoplay, Navigation } from "swiper/modules";
+import { FreeMode, Navigation } from "swiper/modules";
 
 const Explore = () => {
   return (
