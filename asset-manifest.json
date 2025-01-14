@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/VentureTalks/static/css/main.59d49a86.css",
+    "main.js": "/VentureTalks/static/js/main.57ee0bb6.js",
+    "static/media/Artboard 1-1.png": "/VentureTalks/static/media/Artboard 1-1.193ff5057f9e54cc9bab.png",
+    "static/media/Artboard 1.png": "/VentureTalks/static/media/Artboard 1.8434a54d154296cc5a4e.png",
+    "static/media/cs7.jpg": "/VentureTalks/static/media/cs7.c0f35fef41252dbb081e.jpg",
+    "static/media/mike.png": "/VentureTalks/static/media/mike.45fab4cd0626ae6383d4.png",
+    "static/media/cs6.jpg": "/VentureTalks/static/media/cs6.45783a87e8e2dccdee40.jpg",
+    "static/media/cs8.jpg": "/VentureTalks/static/media/cs8.12ffc27090b11bcb366a.jpg",
+    "static/media/silver.jpg": "/VentureTalks/static/media/silver.1826a4ba592a390b10cc.jpg",
+    "static/media/title.jpg": "/VentureTalks/static/media/title.772e9697252ba564c10c.jpg",
+    "static/media/logoo.png": "/VentureTalks/static/media/logoo.ad0548dc7f4a59d76d3a.png",
+    "static/media/cs1.jpg": "/VentureTalks/static/media/cs1.d09165a1529432f992ef.jpg",
+    "static/media/cs2.jpg": "/VentureTalks/static/media/cs2.9bafdda05c6b379c9430.jpg",
+    "static/media/gold.jpg": "/VentureTalks/static/media/gold.edc762448332e880b81b.jpg",
+    "static/media/logo.jpg": "/VentureTalks/static/media/logo.e46db35cbaedbb356d6d.jpg",
+    "static/media/cs5.jpg": "/VentureTalks/static/media/cs5.b9572381acdfe13bd3a7.jpg",
+    "static/media/bronze.jpg": "/VentureTalks/static/media/bronze.1ead53517deefdc49acc.jpg",
+    "static/media/cs4.jpg": "/VentureTalks/static/media/cs4.74a81a19533892e0e3f7.jpg",
+    "static/media/3.svg": "/VentureTalks/static/media/3.91e6b4e0fd25c89014f0059bf4d0e6eb.svg",
+    "static/media/10.svg": "/VentureTalks/static/media/10.6d8b392d3de397c583811e57a34a992c.svg",
+    "static/media/4.svg": "/VentureTalks/static/media/4.fd59cc75df29b4a15fdda7f21904a8cb.svg",
+    "static/media/6.svg": "/VentureTalks/static/media/6.7d88343809e4ee65560dbb591e216955.svg",
+    "static/media/2.svg": "/VentureTalks/static/media/2.025fabeb6dc2d80139925f3f9aa94ee4.svg",
+    "static/media/1.svg": "/VentureTalks/static/media/1.46314d3d965a982ee969a26c5e91c00a.svg",
+    "static/media/9.svg": "/VentureTalks/static/media/9.38ece5af07e1c2d121ee1223e56218fe.svg",
+    "static/media/8.svg": "/VentureTalks/static/media/8.658eb8a9efd9e45dfc0dfdb3f79e0397.svg",
+    "static/media/5.svg": "/VentureTalks/static/media/5.6017ef42e18ee26c585ef6e96a6f998c.svg",
+    "static/media/7.svg": "/VentureTalks/static/media/7.3c14bd4c28b296174197651c239f7d1c.svg",
+    "index.html": "/VentureTalks/index.html",
+    "main.59d49a86.css.map": "/VentureTalks/static/css/main.59d49a86.css.map",
+    "main.57ee0bb6.js.map": "/VentureTalks/static/js/main.57ee0bb6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59d49a86.css",
+    "static/js/main.57ee0bb6.js"
+  ]
+}
