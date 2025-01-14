@@ -44,7 +44,9 @@ const Contact = () => {
               <h1 className="text-2xl text-gray-900 dark:text-white lg:text-4xl">
                 Contact<span> Us</span>
               </h1>
-              <p className="my-4 text-base text-gray-700 dark:text-gray-400">Get in touch</p>
+              <p className="my-4 text-base text-gray-700 dark:text-gray-400">
+                Get in touch
+              </p>
             </div>
 
             {/* Location Section */}
@@ -59,7 +61,9 @@ const Contact = () => {
             <div className="flex items-center mt-6 text-[40px] text-gray-700 dark:text-gray-400">
               <AiFillFacebook />
               <div className="ml-4 text-sm tracking-wide sm:text-base">
-                <a href="https://web.facebook.com/csscuor">Computer Science Students' Community</a>
+                <a href="https://web.facebook.com/csscuor">
+                  Computer Science Students' Community
+                </a>
               </div>
             </div>
 
@@ -80,10 +84,7 @@ const Contact = () => {
             <div className="flex items-center mt-4 text-gray-700 dark:text-gray-400">
               <HiPhone className="w-8 h-8 md:w-10 md:h-10" />
               <div className="ml-4 text-sm tracking-wide sm:text-base">
-                <a
-                  href="tel:+94123456789"
-                  className="cursor-pointer"
-                >
+                <a href="tel:+94123456789" className="cursor-pointer">
                   +94 123 456 789
                 </a>
               </div>

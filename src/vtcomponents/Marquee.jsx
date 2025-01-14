@@ -49,19 +49,16 @@ const Marquee = () => {
     "cssc",
     "university of ruhuna",
     "podcast",
-    "tech talks",    
+    "tech talks",
     "Motivation",
     "Tech Insights",
     "Inspiring Stories",
     "Interactive Learning",
     "Visionaries",
     "Emerging Technologies",
-    
-    
   ];
 
   const lowerMarquee = [
-
     "Cloud Computing",
     "Blockchain",
     "Artificial Intelligence",
@@ -73,7 +70,6 @@ const Marquee = () => {
     "business",
     "stock market",
     "crypto",
-    
   ];
 
   return (

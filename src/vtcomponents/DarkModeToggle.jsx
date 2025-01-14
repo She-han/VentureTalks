@@ -27,8 +27,16 @@ const DarkModeToggle = () => {
       >
         {/* Icons for Light and Dark Mode */}
         <div className="absolute flex items-center justify-between w-full h-full px-3 pb-2 text-2xl text-gray-500 dark:text-gray-300">
-          <FiSun className={`transition-opacity ${isLightMode ? "opacity-100 " : "opacity-0"}`} />
-          <FiMoon className={`transition-opacity ${!isLightMode ? "opacity-100 " : "opacity-0"}`} />
+          <FiSun
+            className={`transition-opacity ${
+              isLightMode ? "opacity-100 " : "opacity-0"
+            }`}
+          />
+          <FiMoon
+            className={`transition-opacity ${
+              !isLightMode ? "opacity-100 " : "opacity-0"
+            }`}
+          />
         </div>
 
         {/* Animated Ball */}

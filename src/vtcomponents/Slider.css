@@ -26,7 +26,7 @@ body::before {
   height: 90%;
   transform: translateX(-50%);
   content: '';
-  
+
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -37,10 +37,10 @@ body::before {
   width: 100%;
   height: 100vh;
   text-align: center;
-  overflow:hidden;
+  overflow: hidden;
   position: relative;
   margin-bottom: 10vh;
-  
+
 }
 
 
@@ -55,7 +55,7 @@ body::before {
   border-radius: 0 0 108px 108px;
   z-index: 1;
   position: relative;
-  
+
 }
 
 
@@ -63,11 +63,11 @@ body::before {
 @media (max-width: 768px) {
   .back {
     background: rgba(187, 206, 240, 0.247);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(2.4px);
-  -webkit-backdrop-filter: blur(2.4px);
-  @apply dark:bg-[#7682df0f];
-  
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2.4px);
+    -webkit-backdrop-filter: blur(2.4px);
+    @apply dark:bg-[#7682df0f];
+
     /* Rounded bottom corners only */
     border-radius: 0 0 36px 36px;
     z-index: 1;
@@ -109,6 +109,7 @@ body::before {
   from {
     transform: perspective(1200px) rotateX(-14deg) rotateY(0deg);
   }
+
   to {
     transform: perspective(1200px) rotateX(-14deg) rotateY(360deg);
   }
@@ -117,8 +118,7 @@ body::before {
 .banner .slider .item {
   position: absolute;
   inset: 0;
-  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-    translateZ(550px);
+  transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 }
 
 .banner .slider .item img {
@@ -174,10 +174,13 @@ body::before {
 /* Fix for centering the .model inside the .slider */
 .banner .content .model {
   position: absolute;
-  top: 40%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Offset by 50% of its own width/height to center */
-  
+  top: 40%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Offset by 50% of its own width/height to center */
+
   width: 25%;
   height: auto;
   background-size: auto 130%;
@@ -193,19 +196,26 @@ body::before {
   left: 0%;
   opacity: 0.5;
   align-items: center;
-  
-  font-size: 6rem; /* Adjust size as needed */
-  color: rgba(255, 255, 255, 0.053); /* Faint text effect */
+
+  font-size: 6rem;
+  /* Adjust size as needed */
+  color: rgba(255, 255, 255, 0.053);
+  /* Faint text effect */
   font-weight: bold;
   text-transform: uppercase;
-  pointer-events: none; /* Ensures it doesn't interfere with clicks */
+  pointer-events: none;
+  /* Ensures it doesn't interfere with clicks */
   z-index: 0;
 
   /* New Additions */
-  word-break: break-word; /* Allows long text to break onto a new line */
-  letter-spacing: 0.1rem; /* Slightly spaces out the letters for readability */
-  font-family: 'Monospace', sans-serif; /* Adds a modern, tech-inspired font */
-  white-space: pre-wrap; /* Preserves whitespace for better formatting */
+  word-break: break-word;
+  /* Allows long text to break onto a new line */
+  letter-spacing: 0.1rem;
+  /* Slightly spaces out the letters for readability */
+  font-family: 'Monospace', sans-serif;
+  /* Adds a modern, tech-inspired font */
+  white-space: pre-wrap;
+  /* Preserves whitespace for better formatting */
 }
 
 
@@ -228,8 +238,7 @@ body::before {
   }
 
   .banner .slider .item {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(300px);
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(300px);
   }
 
   .banner .content h1 {
@@ -261,7 +270,7 @@ body::before {
   }
 
   .banner .content {
-    top:60%;
+    top: 60%;
 
   }
 
@@ -272,8 +281,7 @@ body::before {
   }
 
   .banner .slider .item {
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(180px);
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(180px);
   }
 
   .banner .content h1 {
@@ -281,7 +289,8 @@ body::before {
   }
 
   .banner .background-text {
-    font-size: 3rem; /* Adjust for smaller screens */
+    font-size: 3rem;
+    /* Adjust for smaller screens */
   }
 }
 
@@ -293,5 +302,5 @@ body::before {
     overflow: hidden;
     position: relative;
   }
-  
+
 }

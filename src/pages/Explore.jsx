@@ -1,14 +1,13 @@
-import React from 'react';
-import Navbar from '../vtcomponents/VTnavbar';
-import Footer from '../vtcomponents/VTfooter';
-import Episodes from '../vtcomponents/Episodes';
+import React from "react";
+import Navbar from "../vtcomponents/VTnavbar";
+import Footer from "../vtcomponents/VTfooter";
+import Episodes from "../vtcomponents/Episodes";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { HiOutlineInformationCircle } from "react-icons/hi2";
 import { HiOutlineDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
-
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -48,7 +47,7 @@ const Explore = () => {
             modules={[FreeMode, Navigation]}
             className="max-w-[81%] shadow-lg dark:shadow-gray-300 rounded-xl px-4"
           >
-            <SwiperSlide >
+            <SwiperSlide>
               <div className="gap-2 mx-auto">
                 <div className="p-4 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] cursor-pointer group rounded-xl ">
                   <div className="duration-300">
@@ -102,7 +101,7 @@ const Explore = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide >
+            <SwiperSlide>
               <div className="gap-2 mx-auto">
                 <div className="p-4  bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] cursor-pointer group rounded-xl ">
                   <div className="duration-300">

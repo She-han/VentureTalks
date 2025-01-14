@@ -48,8 +48,8 @@ const Sponsor = () => {
             animate={controls}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Join us as a sponsor and inspire innovation, connect with tech leaders, 
-            and contribute to the future of the IT industry.
+            Join us as a sponsor and inspire innovation, connect with tech
+            leaders, and contribute to the future of the IT industry.
           </motion.p>
           <motion.div
             ref={ref}
@@ -72,8 +72,8 @@ const Sponsor = () => {
         </div>
       </div>
       <div className="w-full mt-10">
-    <Marquee />
-  </div>
+        <Marquee />
+      </div>
     </motion.div>
   );
 };

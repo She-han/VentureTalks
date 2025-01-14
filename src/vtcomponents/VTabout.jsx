@@ -2,11 +2,14 @@ import React from "react";
 import logo from "../assets/images/logo.jpg";
 import { motion } from "framer-motion";
 import { fadeIn } from "../constants/variants";
-import '../index.css'
+import "../index.css";
 
 const About = () => {
   return (
-    <div className="z-[10] py-6 mb-12 text-gray-900 dark:text-white h-auto" id="about">
+    <div
+      className="z-[10] py-6 mb-12 text-gray-900 dark:text-white h-auto"
+      id="about"
+    >
       <motion.div
         variants={fadeIn("up", 0.1)}
         initial="hidden"
@@ -15,7 +18,6 @@ const About = () => {
         className="flex flex-col-reverse items-center px-10 md:px-20 mx-auto max-w-[1400px] sm:flex-row md:gap-6"
       >
         <div>
-
           <div className="w-[360px] md:w-[400px] p-2 md:p-0">
             <img
               src={logo}
@@ -32,9 +34,15 @@ const About = () => {
                 What is<span className="primary-text"> Venture Talks?</span>
               </h3>
               <p className="w-[100%] mx-auto leading-7 text-justify text-gray-800 dark:text-gray-200 font-medium text-lg ">
-              "Venture Talks," curated by the Computer Science Students’ Community (CSSC) of the University of Ruhuna, is a 10-episode podcast series featuring distinguished individuals from the tech and computer science sectors. Each hour-long episode explores their success stories, industry insights, and the latest IT advancements. Available on social media as full episodes and short snippets, the program aims to elevate the university's reputation and enrich IT enthusiasts' knowledge of the industry.
+                "Venture Talks," curated by the Computer Science Students’
+                Community (CSSC) of the University of Ruhuna, is a 10-episode
+                podcast series featuring distinguished individuals from the tech
+                and computer science sectors. Each hour-long episode explores
+                their success stories, industry insights, and the latest IT
+                advancements. Available on social media as full episodes and
+                short snippets, the program aims to elevate the university's
+                reputation and enrich IT enthusiasts' knowledge of the industry.
               </p>
-              
             </div>
 
             <div className="grid justify-center grid-cols-1 gap-2 my-12 place-items-center md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:gap-6 lg:gap-8">
@@ -47,7 +55,9 @@ const About = () => {
                   10
                   <span className="primary-text">+</span>
                 </h3>
-                <span className="text-xs primary-text md:text-base">Episodes</span>
+                <span className="text-xs primary-text md:text-base">
+                  Episodes
+                </span>
               </motion.button>
 
               <motion.button
@@ -60,7 +70,7 @@ const About = () => {
                 </h3>
                 <p>
                   <span className="text-xs primary-text md:text-base">
-                  Specialists
+                    Specialists
                   </span>
                 </p>
               </motion.button>
@@ -76,11 +86,10 @@ const About = () => {
                 </h3>
                 <p>
                   <span className="text-xs primary-text md:text-base">
-                  Listeners
+                    Listeners
                   </span>
                 </p>
               </motion.button>
-
             </div>
           </div>
         </div>
