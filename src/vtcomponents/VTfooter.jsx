@@ -15,16 +15,16 @@ const Footer = () => {
               Inspiring tech enthusiasts and industry professionals through the journey of success in technology.
             </p>
             <div className="flex justify-center space-x-6 md:justify-start">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#FD4101]">
+              <a href="https://web.facebook.com/csscuor/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#FD4101]">
                 <FaFacebook size={30} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#FD4101]">
+              <a href="https://www.youtube.com/@CSSC_RUHUNA" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#FD4101]">
                 <FaYoutube size={30} />
               </a>
               <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#FD4101]">
                 <FaInstagram size={30} />
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#FD4101]">
+              <a href="https://www.linkedin.com/company/csscuor/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#FD4101]">
                 <FaLinkedin size={30} />
               </a>
             </div>

@@ -16,9 +16,9 @@ const Home = () => {
       <Slider/>
       <Hero/>
       <About/> 
-      <Shorts/>
+     
       <Sponsor/>   
-      <Episodes/>
+     
       
       <Contact/>
       <Footer/>

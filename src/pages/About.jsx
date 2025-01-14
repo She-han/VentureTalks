@@ -3,8 +3,8 @@ import Navbar from "../vtcomponents/VTnavbar";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import oc1 from '../assets/images/Artboard 1.png';
-import oc2 from '../assets/images/Artboard 1-1.png';
+import oc1 from '../assets/images/Artboard 1.webp';
+import oc2 from '../assets/images/Artboard 1-1.webp';
 import cs1 from '../assets/images/cs1.jpg';
 import cs2 from '../assets/images/cs5.jpg';
 import cs3 from '../assets/images/cs7.jpg';

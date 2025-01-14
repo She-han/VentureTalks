@@ -48,24 +48,24 @@ const Hero = () => {
         </div>
 
 
-        <div className="flex justify-start gap-8 text-3xl md:gap-12 lg:gap-16 md:text-4xl lg:text-5xl my-7 text-[#6366f1] ">
+        <div className="flex justify-start gap-8 text-3xl md:gap-12 lg:gap-16 md:text-4xl lg:text-5xl my-7 text-[#2563eb] ">
           
           <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-           <a href="https://www.linkedin.com" role="button">
+           <a href="https://www.linkedin.com/company/csscuor/posts/?feedView=all" role="button">
             <AiFillLinkedin />
             </a>
           </motion.button>
           
 
           <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-            <a href="https://www.youtube.com" role="button">
-              {" "}
+            <a href="https://www.youtube.com/@CSSC_RUHUNA" role="button">
+            
               <AiFillYoutube />
             </a>
           </motion.button>
 
           <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-            <a href="https://www.facebook.com" role="button">
+            <a href="https://web.facebook.com/csscuor/" role="button">
               <AiFillFacebook />
             </a>
           </motion.button>
@@ -92,7 +92,7 @@ const Hero = () => {
   <svg viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" width="100%" id="blobSvg">
     <defs>
       <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="rgb(79, 70, 229)" />
+        <stop offset="0%" stopColor="rgb(37, 99, 235)" />
         <stop offset="100%" stopColor="rgb(234, 88, 12)" />
       </linearGradient>
     </defs>
@@ -122,7 +122,7 @@ const Hero = () => {
   <svg viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" width="100%" id="blobSvg">
     <defs>
       <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="rgb(79, 70, 229)" />
+        <stop offset="0%" stopColor="rgb(37, 99, 235)" />
         <stop offset="100%" stopColor="rgb(255, 195, 113)" />
       </linearGradient>
     </defs>

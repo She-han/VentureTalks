@@ -17,19 +17,19 @@ body {
 
 span,
 .primary-color {
-  background-image: linear-gradient(to right, #4f46e5, #6366f1); /* Lighter and harmonious gradient */
+  background-image: linear-gradient(to right, #2563eb, #6366f1); /* Lighter and harmonious gradient */
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .primary-color:hover {
-  background-image: linear-gradient(to right, #4f46e5, #6366f1); /* Lighter and harmonious gradient */
+  background-image: linear-gradient(to right, #2563eb, #6366f1); /* Lighter and harmonious gradient */
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .bg-primary-color {
-  background-image: linear-gradient(to right, #4f46e5, #6366f1);
+  background-image: linear-gradient(to right, #2563eb, #6366f1);
 }
 
 .blur-fil{

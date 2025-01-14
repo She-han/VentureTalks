@@ -22,16 +22,16 @@ const Navbar = () => {
         Venture Talks
       </Link>
       <ul className="items-center justify-around hidden space-x-8 text-base font-medium uppercase lg:ml-80 md:flex">
-        <li className="p-3  hover:text-[#6366f1] ">
+        <li className="p-3  hover:text-[#2563eb] ">
           <Link to="/">Home</Link> 
         </li>
-        <li className="p-3 hover:text-[#6366f1] ">
+        <li className="p-3 hover:text-[#2563eb] ">
           <Link to="/join">Join</Link> 
         </li>
-        <li className="p-3 hover:text-[#6366f1] ">
+        <li className="p-3 hover:text-[#2563eb] ">
           <Link to="/explore">Episodes</Link> 
         </li>
-        <li className="p-3 hover:text-[#6366f1] ">
+        <li className="p-3 hover:text-[#2563eb] ">
           <Link to="/about">About</Link> 
         </li>
        
@@ -54,17 +54,17 @@ const Navbar = () => {
   <a href="/"><h1 className="m-4 text-4xl font-bold text-[#FD4101] ">VENTURE TALKS</h1></a>
 
   <ul className="p-8 text-2xl font-medium uppercase">
-    <li className="p-3 hover:text-[#6366f1] ">
-      <a href="/">Home</a>
+    <li className="p-3 hover:text-[#2563eb] ">
+    <Link to="/">Home</Link> 
     </li>
-    <li className="p-3 hover:text-[#6366f1] ">
-      <a href="/join">Join</a>
+    <li className="p-3 hover:text-[#2563eb] ">
+    <Link to="/join">Join</Link> 
     </li>
-    <li className="p-3 hover:text-[#6366f1] ">
-      <a href="/about">About</a>
+    <li className="p-3 hover:text-[#2563eb] ">
+    <Link to="/explore">Episodes</Link>
     </li>
-    <li className="p-3 hover:text-[#6366f1] ">
-      <a href="/explore">Episodes</a>
+    <li className="p-3 hover:text-[#2563eb] ">
+    <Link to="/about">About</Link> 
     </li>
   </ul>
 </div>

@@ -85,8 +85,24 @@ body::before {
   left: calc(50% - 100px);
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  animation: autoRun 10s linear infinite;
+  animation: autoRun 15s linear infinite;
+  will-change: transform;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .banner .slider {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    top: 15%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 15s linear infinite;
+    z-index: 2;
+  }
 }
 
 @keyframes autoRun {

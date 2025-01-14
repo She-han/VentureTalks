@@ -61,7 +61,7 @@ const Team = () => {
           <div className="px-4">
           <SwiperSlide>
   <div className="gap-2 mx-auto">
-    <div className=" p-3 m-2 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
+    <div className=" p-3 m-2 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
       <div className="duration-300">
         {/* YouTube Video Embed */}
         <iframe
@@ -114,7 +114,7 @@ const Team = () => {
 </SwiperSlide>
 <SwiperSlide>
   <div className="gap-2 mx-auto">
-    <div className=" p-3 m-2 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
+    <div className=" p-3 m-2 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
       <div className="duration-300">
         {/* YouTube Video Embed */}
         <iframe
@@ -167,7 +167,7 @@ const Team = () => {
 </SwiperSlide>
 <SwiperSlide>
   <div className="gap-2 mx-auto">
-    <div className=" p-3 m-2 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
+    <div className=" p-3 m-2 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
       <div className="duration-300">
         {/* YouTube Video Embed */}
         <iframe
@@ -220,7 +220,7 @@ const Team = () => {
 </SwiperSlide>
 <SwiperSlide>
   <div className="gap-2 mx-auto">
-    <div className=" p-3 m-2 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
+    <div className=" p-3 m-2 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
       <div className="duration-300">
         {/* YouTube Video Embed */}
         <iframe
@@ -273,7 +273,7 @@ const Team = () => {
 </SwiperSlide>
 <SwiperSlide>
   <div className="gap-2 mx-auto">
-    <div className=" p-3 m-2 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
+    <div className=" p-3 m-2 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
       <div className="duration-300">
         {/* YouTube Video Embed */}
         <iframe
@@ -326,7 +326,7 @@ const Team = () => {
 </SwiperSlide>
 <SwiperSlide>
   <div className="gap-2 mx-auto">
-    <div className=" p-3 m-2 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
+    <div className=" p-3 m-2 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
       <div className="duration-300">
         {/* YouTube Video Embed */}
         <iframe
@@ -379,7 +379,7 @@ const Team = () => {
 </SwiperSlide>
 <SwiperSlide>
   <div className="gap-2 mx-auto">
-    <div className=" p-3 m-2 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
+    <div className=" p-3 m-2 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] shadow-gray-800  cursor-pointer group rounded-xl shadow-lg dark:shadow-gray-300 ">
       <div className="duration-300">
         {/* YouTube Video Embed */}
         <iframe

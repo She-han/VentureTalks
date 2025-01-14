@@ -50,7 +50,7 @@ const Explore = () => {
           >
             <SwiperSlide >
               <div className="gap-2 mx-auto">
-                <div className="p-4 bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] cursor-pointer group rounded-xl ">
+                <div className="p-4 bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] cursor-pointer group rounded-xl ">
                   <div className="duration-300">
                     {/* YouTube Video Embed */}
                     <iframe
@@ -104,7 +104,7 @@ const Explore = () => {
             </SwiperSlide>
             <SwiperSlide >
               <div className="gap-2 mx-auto">
-                <div className="p-4  bg-indigo-600 dark:bg-[rgba(2,35,95,0.295)] cursor-pointer group rounded-xl ">
+                <div className="p-4  bg-blue-800 dark:bg-[rgba(2,35,95,0.295)] cursor-pointer group rounded-xl ">
                   <div className="duration-300">
                     {/* YouTube Video Embed */}
                     <iframe
