@@ -2,7 +2,7 @@ import React from "react";
 
 const Shorts = () => {
   return (
-    <div className="flex justify-center items-center mx-auto max-w-[82%] pt-8 mb-12 ">
+    <div className="flex justify-center items-center mx-auto max-w-[83%] pt-8 mb-12 ">
       <iframe
         width="100%"
         height="450"
