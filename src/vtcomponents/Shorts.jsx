@@ -4,8 +4,8 @@ const Shorts = () => {
   return (
     <div className="flex justify-center items-center mx-auto max-w-[83%] pt-8 mb-12 ">
       <iframe
-        width="100%"
-        height="450"
+        width="100%" 
+        height="450" 
         src="https://widget.tagembed.com/2145521"
         title="YouTube video player"
         frameborder="0"
