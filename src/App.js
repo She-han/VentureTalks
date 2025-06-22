@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom"; // Import Routes and Route
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Join from "./pages/Join";
+import Invitation01 from "./pages/Invitation01";
 
-import Invite01 from "./pages/Invite01"; // Import the Invite01 component
 
 function App() {
   return (
@@ -13,8 +13,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/join" element={<Join />} />
+        <Route path="/invite01" element={<Invitation01 />} />
      
-        <Route path="/invite01" element={< Invite01/>} /> 
+     
+        
       </Routes>
     </div>
   );

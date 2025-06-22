@@ -10,7 +10,7 @@ import Contact from '../vtcomponents/VTcontact'
 import Gototop from '../vtcomponents/Gototop'
 import Footer from '../vtcomponents/VTfooter'
 
-const Invite01 = () => {
+const Invitation01 = () => {
   return (
     <div>
       <Navbar />
@@ -28,4 +28,4 @@ const Invite01 = () => {
   )
 }
 
-export default Invite01
+export default Invitation01
