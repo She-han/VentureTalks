@@ -14,23 +14,15 @@ const Navbar = () => {
     <nav className=" bg-opacity-95 text-gray-200  flex justify-between items-center  h-24 px-4 lg:px-20 xl:px-36 text-l top-0 z-[8] bg-[#02235f] shadow-[0_4px_30px_rgba(0,0,0,0.1)]  lg:rounded-b-[108px]">
       <Link
         to="/"
-        className="m-2 text-2xl md:text-3xl lg:text-4xl font-bold text-[#FD4101]"
+        className="m-2 text-2xl md:text-3xl lg:text-4xl font-bold text-[#FD4101] uppercase"
       >
         Venture Talks
       </Link>
-      <ul className="items-center justify-around hidden space-x-8 text-base font-medium uppercase lg:ml-80 md:flex">
-        <li className="p-3  hover:text-[#2563eb] ">
-          <Link to="/">Home</Link>
+      <ul className="text-xl font-medium lg:ml-[500px] md:flex hidden">
+        <li className="p-3 ">
+          <Link to="/invite01">Guest Invite Confirmation</Link>
         </li>
-        <li className="p-3 hover:text-[#2563eb] ">
-          <Link to="/join">Join</Link>
-        </li>
-        <li className="p-3 hover:text-[#2563eb] ">
-          <Link to="/explore">Episodes</Link>
-        </li>
-        <li className="p-3 hover:text-[#2563eb] ">
-          <Link to="/about">About</Link>
-        </li>
+
       </ul>
 
       <DarkModeToggle />
@@ -52,19 +44,11 @@ const Navbar = () => {
           </h1>
         </a>
 
-        <ul className="p-8 text-2xl font-medium uppercase">
+        <ul className="p-8 text-xl font-medium ">
           <li className="p-3 hover:text-[#2563eb] ">
-            <Link to="/">Home</Link>
+            <Link to="/invite01">Guest Invite Confirmation</Link>
           </li>
-          <li className="p-3 hover:text-[#2563eb] ">
-            <Link to="/join">Join</Link>
-          </li>
-          <li className="p-3 hover:text-[#2563eb] ">
-            <Link to="/explore">Episodes</Link>
-          </li>
-          <li className="p-3 hover:text-[#2563eb] ">
-            <Link to="/about">About</Link>
-          </li>
+
         </ul>
       </div>
     </nav>

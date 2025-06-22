@@ -286,7 +286,7 @@ const Explore = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 ">
+    <div className="min-h-screen bg-gray-100 w-[100%] dark:bg-gray-900 ">
       {/* Custom Styles */}
       <style dangerouslySetInnerHTML={{ __html: datePickerCustomStyles }} />
       
@@ -299,10 +299,10 @@ const Explore = () => {
         </div>
       </div>*/}
 
-      <div className="max-w-6xl px-4 py-8 mx-auto">
+      <div className="w-[81%] py-8 mx-auto">
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Guest Profile Section */}
-          <div className="p-8 bg-white shadow-xl rounded-3xl animate-slide-in-left">
+          <div className="p-8 bg-white shadow-xl rounded-3xl ">
             <div className="mb-8 text-center">
               <div className="relative w-32 h-32 mx-auto mb-6">
                 <img

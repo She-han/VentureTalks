@@ -25,7 +25,7 @@ const Hero = React.memo(() => {
   );
 
   return (
-    <div className="px-10 md:px-20 my-7 sm:my-24 max-w-[1400px] mx-auto flex flex-col-reverse sm:flex-row justify-between pt-40 md:pt-0 bg-gray-100 dark:bg-gray-900">
+    <div className="px-10 md:px-20 my-0 sm:my-24 max-w-[1400px] mx-auto flex flex-col-reverse sm:flex-row justify-between pt-0 md:pt-0 bg-gray-100 dark:bg-gray-900">
       <motion.div
         variants={fadeIn("up", 0.1)}
         initial="hidden"

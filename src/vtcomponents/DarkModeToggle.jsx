@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiSun, FiMoon } from "react-icons/fi"; // Import icons from react-icons
 
 const DarkModeToggle = () => {
-  const [isLightMode, setIsLightMode] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(true); // Changed to true for light mode default
 
   useEffect(() => {
     const rootElement = document.documentElement;
@@ -23,7 +23,7 @@ const DarkModeToggle = () => {
     <div className="flex items-center justify-center rounded-full md:mr-0 ">
       <div
         onClick={toggleMode}
-        className="relative w-20 h-10 p-1 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700"
+        className="relative w-16 h-8 p-1 bg-gray-300 rounded-full cursor-pointer dark:bg-gray-700"
       >
         {/* Icons for Light and Dark Mode */}
         <div className="absolute flex items-center justify-between w-full h-full px-3 pb-2 text-2xl text-gray-500 dark:text-gray-300">
@@ -41,7 +41,7 @@ const DarkModeToggle = () => {
 
         {/* Animated Ball */}
         <motion.div
-          className="absolute w-8 h-8 bg-white rounded-full shadow-md dark:bg-gray-400"
+          className="absolute w-6 h-6 bg-white rounded-full shadow-md dark:bg-gray-400"
           layout
           transition={{ type: "spring", stiffness: 500, damping: 30 }}
           style={{

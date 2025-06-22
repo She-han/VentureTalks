@@ -22,138 +22,129 @@ import {
   Heart
 } from 'lucide-react';
 
-import oc1 from "../assets/images/Artboard 1.webp";
-import oc2 from "../assets/images/Artboard 1-1.webp";
+
 import cs1 from "../assets/images/cs1.jpg";
 import cs2 from "../assets/images/cs5.jpg";
 import cs3 from "../assets/images/cs7.jpg";
-
 import cs5 from "../assets/images/slasscom.webp";
 import cs6 from "../assets/images/cfair.webp";
 import cs7 from "../assets/images/cs8.jpg";
 
-import Contact from "../vtcomponents/VTcontact";
-import Footer from "../vtcomponents/VTfooter";
-import Gototop from "../vtcomponents/Gototop";
-import Explore from "./Explore";
+import rp1 from "../assets/malinda_pic.jpg";
+import rp2 from "../assets/sanjeewa_pic.webp";
+import rp3 from "../assets/shalin-1.jpg";
+import rp4 from "../assets/dhanika.jpeg";
+import rp5 from "../assets/hameed_pic.jpeg";
+
+
 
 const TabContent = ({ activeTab }) => {
   // Guest profiles data
   const guestProfiles = [
     {
       id: 1,
-      name: "Mr. Alahakoon",
+      name: "Mr. Malinda Alahakoon",
       title: "Education & Tech Expert",
       specialization: "AI Integration & Content Creation",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      image: rp1,
       bio: "Over a decade of lecturing experience at prestigious universities with expertise in AI integration and digital content creation.",
       achievements: ["10+ Years Teaching", "AI Workshop Leader", "Digital Content Expert"],
       location: "Sri Lanka",
       status: "Confirmed"
     },
-    {
-      id: 2,
-      name: "Dr. Sarah Chen",
-      title: "Tech Entrepreneur & Investor",
-      specialization: "Startup Ecosystem & Innovation",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
-      bio: "Serial entrepreneur and venture capitalist with successful exits in the tech industry. Currently mentoring early-stage startups.",
-      achievements: ["3 Successful Exits", "Angel Investor", "Forbes 30 Under 30"],
-      location: "Silicon Valley",
-      status: "Invited"
-    },
-    {
-      id: 3,
-      name: "Prof. Michael Rodriguez",
-      title: "Computer Science Researcher",
-      specialization: "Machine Learning & Data Science",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      bio: "Leading researcher in machine learning applications with numerous publications in top-tier conferences and journals.",
-      achievements: ["50+ Research Papers", "IEEE Fellow", "Google Research Award"],
-      location: "MIT",
-      status: "Confirmed"
-    },
-    {
-      id: 4,
-      name: "Ms. Priya Sharma",
-      title: "Software Engineering Manager",
-      specialization: "Cloud Computing & DevOps",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face",
-      bio: "Senior engineering leader at major tech company, specialized in building scalable cloud infrastructure and leading high-performing teams.",
-      achievements: ["10+ Years at FAANG", "Cloud Architecture Expert", "Team Leadership"],
-      location: "Seattle",
-      status: "Pending"
-    },
-    {
-      id: 5,
-      name: "Dr. James Wilson",
-      title: "Cybersecurity Specialist",
-      specialization: "Information Security & Privacy",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face",
-      bio: "Cybersecurity expert with extensive experience in protecting critical infrastructure and developing security frameworks.",
-      achievements: ["CISSP Certified", "Security Framework Author", "Government Advisor"],
-      location: "London",
-      status: "Invited"
-    },
-    {
-      id: 6,
-      name: "Ms. Lisa Thompson",
-      title: "UX Design Director",
-      specialization: "Human-Computer Interaction",
-      image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=300&h=300&fit=crop&crop=face",
-      bio: "Award-winning UX designer with focus on accessible design and user research methodologies for global products.",
-      achievements: ["Design Award Winner", "Accessibility Advocate", "Published Author"],
-      location: "Toronto",
-      status: "Confirmed"
-    }
+ {
+    id: 2,
+    name: "Dr. Sanjiva Weerawarana",
+    title: "Founder & CEO of WSO2",
+    specialization: "Open-Source Technology & Enterprise Solutions",
+    image: rp2,
+    bio: "Founder of WSO2, a globally respected open-source company that has placed Sri Lanka on the world map for enterprise technology. Ph.D. from Purdue University with expertise in bridging research, education, and entrepreneurship.",
+    achievements: ["WSO2 Founder", "Ph.D. Purdue University", "Open-Source Advocate", "Global Tech Leader"],
+    location: "Sri Lanka",
+    status: "Invited"
+  },
+  {
+    id: 3,
+    name: "Mr. Shalin Balasuriya",
+    title: "Co-Founder of Spa Ceylon",
+    specialization: "Ayurveda & Global Brand Development",
+    image: rp3,
+    bio: "Co-founder of Spa Ceylon, taking Sri Lankan Ayurveda to over 33 countries. Visionary leader in natural wellness, elegant branding, and cultural storytelling with advocacy for workplace wellness.",
+    achievements: ["33+ Countries Presence", "Ayurveda Global Ambassador", "Cultural Brand Builder", "Wellness Advocate"],
+    location: "Sri Lanka",
+    status: "Invited"
+  },
+  {
+    id: 4,
+    name: "Mr. Dhanika Perera",
+    title: "Founder of Bhasha Lanka & Tech Innovator",
+    specialization: "Local Language Technology & Digital Payments",
+    image: rp4,
+    bio: "Founder of Bhasha Lanka while still an undergraduate, creator of revolutionary platforms Helakuru and PayHere. Transformed Sinhala digital communication and advanced Sri Lanka's digital economy.",
+    achievements: ["Helakuru Creator", "PayHere Founder", "Digital Innovation Pioneer", "Language Technology Expert"],
+    location: "Sri Lanka",
+    status: "Invited"
+  },
+  {
+    id: 5,
+    name: "Mr. Fouzul Hameed",
+    title: "Chairman of Hameedia Group",
+    specialization: "Fashion Industry & Social Responsibility",
+    image: rp5,
+    bio: "Transformed Hameedia Group from a family tailoring shop into an internationally recognized fashion powerhouse. Founded My Friend Foundation and 'English for All' program, uplifting thousands of underprivileged children.",
+    achievements: ["Global Fashion Leader", "Envoy London Expansion", "My Friend Foundation", "Social Impact Champion"],
+    location: "Sri Lanka",
+    status: "Invited"
+  }
+
   ];
 
   // Past events data
- const pastEvents = [
-     {
-       id: 1,
-       title: "CS Paduna 2024",
-       description: "Cultural flair showcasing creativity with the arts",
-       image: cs1,
-       category: "Cultural"
-     },
-     {
-       id: 2,
-       title: "Insurgex 1.0",
-       description: "Intra university hackathon expanding horizons",
-       image: cs3,
-       category: "Hackathon"
-     },
-     {
-       id: 3,
-       title: "IT and BPM Career Fair",
-       description: "Connecting students with industry opportunities",
-       image: cs5,
-       category: "Workshop"
-     },
- 
-     {
-       id: 5,
-       title: "GDG Outreach Program",
-       description: "Collaboration with Google Developers Group",
-       image: cs2,
-       category: "Outreach"
-     },
-     {
-       id: 6,
-       title: "Career Fair 2025",
-       description: "Connecting students with industry opportunities",
-       image: cs6,
-       category: "Career"
-     },
-     {
-       id: 7,
-       title: "Road to RushCoder",
-       description: "Preparation workshops for upcoming hackathon",
-       image: cs7,
-       category: "Workshop"
-     }
-   ];
+  const pastEvents = [
+    {
+      id: 1,
+      title: "CS Paduna 2024",
+      description: "Cultural flair showcasing creativity with the arts",
+      image: cs1,
+      category: "Cultural"
+    },
+    {
+      id: 2,
+      title: "Insurgex 1.0",
+      description: "Intra university hackathon expanding horizons",
+      image: cs3,
+      category: "Hackathon"
+    },
+    {
+      id: 3,
+      title: "IT and BPM Career Fair",
+      description: "Connecting students with industry opportunities",
+      image: cs5,
+      category: "Workshop"
+    },
+
+    {
+      id: 5,
+      title: "GDG Outreach Program",
+      description: "Collaboration with Google Developers Group",
+      image: cs2,
+      category: "Outreach"
+    },
+    {
+      id: 6,
+      title: "Career Fair 2025",
+      description: "Connecting students with industry opportunities",
+      image: cs6,
+      category: "Career"
+    },
+    {
+      id: 7,
+      title: "Road to RushCoder",
+      description: "Preparation workshops for upcoming hackathon",
+      image: cs7,
+      category: "Workshop"
+    }
+  ];
 
   const stats = [
     { label: "Active Members", value: "450+", icon: Users, color: "text-blue-600" },
@@ -188,12 +179,12 @@ const TabContent = ({ activeTab }) => {
   switch (activeTab) {
     case "venturetalks":
       return (
-        <div className="p-6 bg-gray-100 shadow-xl dark:bg-gray-800 md:p-10 rounded-3xl">
+        <div className="p-6 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
           {/* Project Overview */}
           <section className="mb-16">
             <div className="mb-12 text-center">
-              <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-6">Project Overview</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#FD4101] to-[#02235f] mx-auto rounded-full"></div>
+              <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-6">What is VentureTalks?</h2>
+              <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
             </div>
             
             <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -273,7 +264,7 @@ const TabContent = ({ activeTab }) => {
           </section>
 
           {/* Statistics */}
-          <section className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <section className="grid grid-cols-2 gap-6 lg:mb-12 lg:grid-cols-4">
             {stats.map((stat, index) => (
               <div 
                 key={index}
@@ -286,7 +277,7 @@ const TabContent = ({ activeTab }) => {
             ))}
           </section>
 
-          {/* Organizing Committee */}
+          {/* Organizing Committee
           <div className="mt-16">
             <div className="mb-6 text-2xl font-semibold text-[#02235f] dark:text-[#FD4101]">
               Organizing Committee
@@ -299,18 +290,18 @@ const TabContent = ({ activeTab }) => {
                 <img src={oc2} className="w-full h-auto" alt="Organizing Committee 2" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       );
 
     case "cssc":
       return (
-        <div className="p-6 bg-gray-100 shadow-xl dark:bg-gray-800 md:p-10 rounded-3xl">
+        <div className="p-6 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
           {/* Community Section */}
           <section className="mb-24">
             <div className="mb-12 text-center">
               <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-6">Our Community</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#FD4101] to-[#02235f] mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
             </div>
 
             <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -500,10 +491,10 @@ const TabContent = ({ activeTab }) => {
 
     case "profiles":
       return (
-        <div className="p-6 bg-gray-100 shadow-xl dark:bg-gray-800 md:p-10 rounded-3xl">
+        <div className="p-6 mb-16 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-6">Guest Profiles</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#FD4101] to-[#02235f] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
               Meet our distinguished guests who are shaping the future of technology and inspiring the next generation of innovators.
             </p>
@@ -512,11 +503,11 @@ const TabContent = ({ activeTab }) => {
 
 
           {/* Guest Profiles Grid */}
-          <div className="grid grid-cols-1 gap-8 shadow-xl md:grid-cols-2 lg:grid-cols-3 rounded-3xl">
+          <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3 rounded-3xl">
             {guestProfiles.map((guest, index) => (
               <div 
                 key={guest.id}
-                className="overflow-hidden transition-all duration-300 bg-white shadow-lg dark:bg-gray-700 rounded-2xl hover:shadow-xl hover:scale-105"
+                className="overflow-hidden transition-all duration-300 shadow-lg bg-gray-50 dark:bg-gray-700 rounded-2xl hover:shadow-xl hover:scale-105"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Profile Header */}
@@ -530,11 +521,7 @@ const TabContent = ({ activeTab }) => {
                         className="object-cover w-24 h-24 border-4 border-white rounded-full shadow-lg"
                       />
                       <div className="absolute -bottom-1 -right-1">
-                        <div className={`w-6 h-6 rounded-full border-2 border-white ${
-                          guest.status === 'Confirmed' ? 'bg-green-500' :
-                          guest.status === 'Invited' ? 'bg-yellow-500' :
-                          'bg-blue-500'
-                        }`}></div>
+                     
                       </div>
                     </div>
                   </div>
@@ -569,8 +556,7 @@ const TabContent = ({ activeTab }) => {
                   {/* Achievements */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-[#02235f] dark:text-[#FD4101] mb-2 flex items-center">
-                      <Trophy className="w-4 h-4 mr-1" />
-                      Key Achievements
+                
                     </h4>
                     <div className="flex flex-wrap gap-1">
                       {guest.achievements.map((achievement, idx) => (
@@ -630,7 +616,7 @@ const About = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="w-[81%] mx-auto my-16 ">
         {/* Tabs Navigation */}
         <div className="flex items-center justify-around mb-6 space-x-6">
@@ -638,9 +624,9 @@ const About = () => {
             onClick={() => setActiveTab("venturetalks")}
             className={`text-xl font-semibold ${
               activeTab === "venturetalks"
-                ? "text-blue-600 w-48 bg-gray-100 dark:bg-gray-800 rounded-full p-4  shadow-lg"
-                : "text-gray-900 dark:text-gray-200"
-            } hover:bg-clip-padding hover:bg-gray-200 dark:hover:bg-gray-800 hover:rounded-full p-4 w-48 transition-all duration-300`}
+                ? "text-blue-600 w-48 bg-white dark:bg-gray-800 rounded-3xl lg:rounded-full p-4  shadow-lg"
+                : "text-gray-900 dark:text-gray-200 shadow-lg rounded-3xl lg:rounded-full"
+            } hover:bg-clip-padding hover:bg-gray-200 dark:hover:bg-gray-800 hover:rounded-3xl lg:hover:rounded-full p-4 w-48 transition-all duration-300`}
           >
             Venture Talks
           </button>
@@ -648,9 +634,9 @@ const About = () => {
             onClick={() => setActiveTab("cssc")}
             className={`text-xl font-semibold ${
               activeTab === "cssc"
-                ? "text-blue-600 w-48 bg-gray-100 dark:bg-gray-800 rounded-full p-4 shadow-lg"
-                : "text-gray-900 dark:text-gray-200"
-            } hover:bg-clip-padding hover:bg-gray-200 dark:hover:bg-gray-800 hover:rounded-full p-4 w-48 transition-all duration-300`}
+                ? "text-blue-600 w-48 bg-white   dark:bg-gray-800 rounded-3xl lg:rounded-full p-4 shadow-lg"
+                : "text-gray-900 dark:text-gray-200 shadow-lg rounded-3xl lg:rounded-full"
+            } hover:bg-clip-padding hover:bg-gray-200 dark:hover:bg-gray-800 hover:rounded-3xl lg:hover:rounded-full p-4 w-48 transition-all duration-300`}
           >
             CSSC
           </button>
@@ -658,9 +644,9 @@ const About = () => {
             onClick={() => setActiveTab("profiles")}
             className={`text-xl font-semibold ${
               activeTab === "profiles"
-                ? "text-blue-600 w-48 bg-gray-100 dark:bg-gray-800 rounded-full p-4 shadow-lg"
-                : "text-gray-900 dark:text-gray-200"
-            } hover:bg-clip-padding hover:bg-gray-200 dark:hover:bg-gray-800 hover:rounded-full p-4 w-48 transition-all duration-300`}
+                ? "text-blue-600 w-48 bg-white dark:bg-gray-800 rounded-3xl lg:rounded-full p-4 shadow-lg"
+                : "text-gray-900 dark:text-gray-200 shadow-lg rounded-3xl lg:rounded-full"
+            } hover:bg-clip-padding hover:bg-gray-200 dark:hover:bg-gray-800 hover:rounded-3xl lg:hover:rounded-full p-4 w-48 transition-all duration-300`}
           >
             Guest Profiles
           </button>
@@ -677,9 +663,7 @@ const About = () => {
         </motion.div>
       </div>
      
-      <Contact />
-      <Footer />
-      <Gototop />
+   
 
       <style jsx>{`
         @keyframes slide-up {
