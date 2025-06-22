@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, User, MessageSquare, Send, Check } from 'lucide-react';
+import { Calendar, Clock, MessageSquare, Send, Check } from 'lucide-react';
 import DatePicker from 'react-datepicker';
 import emailjs from '@emailjs/browser';
 import "react-datepicker/dist/react-datepicker.css";

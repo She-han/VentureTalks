@@ -1,9 +1,7 @@
 import React from 'react'
 import Navbar from '../vtcomponents/InviteNavbar'
 import Hero from '../vtcomponents/VThero'
-import VTabout from '../vtcomponents/VTabout'
-import Marquee from '../vtcomponents/Marquee'
-import Shorts from '../vtcomponents/Shorts'
+
 import About from '../vtcomponents/AboutNew'
 import Explore from './Explore'
 import Contact from '../vtcomponents/VTcontact'

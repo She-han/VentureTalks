@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../vtcomponents/VTnavbar";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
@@ -18,7 +18,7 @@ import {
   GraduationCap,
   Lightbulb,
   MapPin,
-  Trophy,
+  
   Heart
 } from 'lucide-react';
 

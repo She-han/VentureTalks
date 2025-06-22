@@ -35,7 +35,7 @@ import cs7 from "../assets/images/cs8.jpg";
 import Contact from "../vtcomponents/VTcontact";
 import Footer from "../vtcomponents/VTfooter";
 import Gototop from "../vtcomponents/Gototop";
-import Explore from "./Explore";
+
 
 const TabContent = ({ activeTab }) => {
   // Guest profiles data
