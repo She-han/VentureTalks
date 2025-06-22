@@ -3,6 +3,7 @@ import { Calendar, Clock, User, MessageSquare, Send, Check } from 'lucide-react'
 import DatePicker from 'react-datepicker';
 import emailjs from '@emailjs/browser';
 import "react-datepicker/dist/react-datepicker.css";
+import img from '../assets/malinda_pic.jpg'; // Replace with your actual image path
 
 const Explore = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -263,9 +264,9 @@ const Explore = () => {
           <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-green-100 rounded-full">
             <Check className="w-10 h-10 text-green-600" />
           </div>
-          <h2 className="mb-4 text-2xl font-bold text-gray-800">Invitation Sent!</h2>
+          <h2 className="mb-4 text-2xl font-bold text-gray-800">Confirmation Sent!</h2>
           <p className="mb-6 text-gray-600">
-            Your podcast invitation has been successfully sent to Mr. Alahakoon. We've also sent you a confirmation email.
+            Your time slot confirmation has been successfully sent to VentureTalks Team. We've sent you a confirmation email soon.
           </p>
           <button
             onClick={() => {
@@ -277,7 +278,7 @@ const Explore = () => {
             }}
             className="px-6 py-3 font-semibold text-white transition-all duration-300 transform bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:from-purple-700 hover:to-blue-700 hover:scale-105"
           >
-            Schedule Another
+            Okay
           </button>
         </div>
       </div>
@@ -285,18 +286,18 @@ const Explore = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 ">
       {/* Custom Styles */}
       <style dangerouslySetInnerHTML={{ __html: datePickerCustomStyles }} />
       
-      {/* Header */}
+      {/* Header 
       <div className="bg-white shadow-lg">
         <div className="max-w-6xl px-4 py-6 mx-auto">
           <h1 className="text-3xl font-bold text-center text-transparent md:text-4xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text">
             Podcast Guest Invitation
           </h1>
         </div>
-      </div>
+      </div>*/}
 
       <div className="max-w-6xl px-4 py-8 mx-auto">
         <div className="grid gap-8 lg:grid-cols-2">
@@ -305,40 +306,47 @@ const Explore = () => {
             <div className="mb-8 text-center">
               <div className="relative w-32 h-32 mx-auto mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+                  src={img}
                   alt="Mr. Alahakoon"
-                  className="object-cover w-full h-full border-4 border-purple-400 rounded-full shadow-lg"
+                  className="object-cover w-full h-full border-4 border-purple-600 rounded-full shadow-lg"
                 />
-                <div className="absolute w-8 h-8 bg-green-500 border-4 border-white rounded-full -bottom-2 -right-2"></div>
+              
               </div>
-              <h2 className="mb-2 text-2xl font-bold text-gray-800 md:text-3xl">Mr. Alahakoon</h2>
+              <h2 className="mb-2 text-2xl font-bold text-gray-800 md:text-3xl">Mr. Malinda Alahakoon</h2>
               <p className="text-lg font-semibold text-purple-600">Education & Tech Expert</p>
             </div>
 
             <div className="space-y-6">
               <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl">
                 <h3 className="flex items-center mb-4 text-xl font-bold text-gray-800">
-                  <User className="w-5 h-5 mr-2 text-purple-600" />
+                 
                   About Our Distinguished Guest
                 </h3>
-                <div className="space-y-4 leading-relaxed text-gray-700">
+                <div className="space-y-4 font-medium leading-relaxed text-gray-700">
                   <p>
-                    We deeply admire your extraordinary contributions to education and content creation in Sri Lanka. 
-                    With a science degree and over a decade of lecturing at prestigious universities, your academic 
-                    foundation is impressive.
+                    We deeply admire your extraordinary contributions to education and content creation in Sri 
+Lanka. With a science degree and over a decade of lecturing at prestigious universities, your 
+academic foundation is impressive. 
                   </p>
                   <p>
                     Your ability to translate complex scientific and tech concepts into engaging video lessons is 
-                    exceptional. Your expertise in AI integration, as shown by your workshops and masterclasses, 
-                    highlights your forward-thinking approach.
+exceptional. Your expertise in AI integration, as shown by your workshops and masterclasses, 
+highlights your forward-thinking approach.
                   </p>
                   <p>
-                    Your guidance for aspiring entrepreneurs on business and monetization and your role as a public 
-                    speaker training others in digital content and branding, solidify your position as a leading voice.
+                    Your guidance for aspiring entrepreneurs on business and monetization and your role as a 
+public speaker training others in digital content and branding, solidify your position as a leading 
+voice. Your active presence across various platforms further demonstrates your dedication to 
+education.
+                  </p>
+                  <p>
+                    Mr. Alahakoon, your multifaceted contributions make you an invaluable asset to our country. 
+Your experiences and insights would be profoundly impactful for our audience.
                   </p>
                   <p className="font-semibold text-purple-700">
-                    Mr. Alahakoon, your multifaceted contributions make you an invaluable asset to our country. 
-                    We would be honored if you would consider joining us for our podcasting program series.
+    Therefore, we would be honored if you would consider joining us for a podcasting program 
+series. We believe your unique journey and perspectives would resonate profoundly with our 
+listeners and provide immense value to our discussions.
                   </p>
                 </div>
               </div>
@@ -372,7 +380,7 @@ const Explore = () => {
 
               {/* Date Selection */}
               <div>
-                <label className="flex items-center block mb-3 text-sm font-semibold text-gray-700">
+                <label className="flex items-center mb-3 text-sm font-semibold text-gray-700">
                   <Calendar className="w-4 h-4 mr-2 text-purple-600" />
                   Select Date
                 </label>
@@ -394,7 +402,7 @@ const Explore = () => {
 
               {/* Time Selection */}
               <div>
-                <label className="flex items-center block mb-3 text-sm font-semibold text-gray-700">
+                <label className="flex items-center mb-3 text-sm font-semibold text-gray-700">
                   <Clock className="w-4 h-4 mr-2 text-purple-600" />
                   Select Time
                 </label>
@@ -418,7 +426,7 @@ const Explore = () => {
 
               {/* Note Section */}
               <div>
-                <label className="flex items-center block mb-3 text-sm font-semibold text-gray-700">
+                <label className="flex items-center mb-3 text-sm font-semibold text-gray-700">
                   <MessageSquare className="w-4 h-4 mr-2 text-purple-600" />
                   Additional Notes (Optional)
                 </label>
@@ -426,7 +434,7 @@ const Explore = () => {
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
                   placeholder="Any specific topics you'd like to discuss or special requirements..."
-                  className="w-full p-4 transition-all duration-300 border border-gray-200 resize-none rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full p-4 font-normal transition-all duration-300 border border-gray-200 resize-none rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   rows="4"
                 />
               </div>
@@ -446,17 +454,17 @@ const Explore = () => {
               <button
                 type="submit"
                 disabled={isLoading || !selectedDate || !selectedTime}
-                className="w-full py-4 text-lg font-semibold text-white transition-all duration-300 transform shadow-lg bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:scale-105 hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full py-4 text-lg font-semibold text-white transition-all duration-300 transform bg-blue-600 shadow-lg rounded-xl hover:scale-105 hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">
                     <div className="w-5 h-5 mr-2 border-2 border-white rounded-full border-t-transparent animate-spin"></div>
-                    Sending Invitation...
+                    Sending Confirmation...
                   </div>
                 ) : (
                   <div className="flex items-center justify-center">
                     <Send className="w-5 h-5 mr-2" />
-                    Send Invitation Request
+                    Confirm & Send
                   </div>
                 )}
               </button>
