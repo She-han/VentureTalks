@@ -1,38 +1,83 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, MessageSquare, Send, Check } from 'lucide-react';
+import { Calendar, MessageSquare, Send, Check, MapPin, CheckCircle, XCircle, Phone } from 'lucide-react';
 import DatePicker from 'react-datepicker';
 import emailjs from '@emailjs/browser';
 import "react-datepicker/dist/react-datepicker.css";
-import img from '../assets/malinda_pic.jpg'; // Replace with your actual image path
+import img from '../assets/malinda_pic.jpg';
 
 const Explore = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState('');
+  const [invitationAccepted, setInvitationAccepted] = useState(null); // null, true, false
+  const [selectedDates, setSelectedDates] = useState([]); // Array of dates
+  const [selectedLocation, setSelectedLocation] = useState('');
+  const [otherLocationDetails, setOtherLocationDetails] = useState('');
+  const [contactNumber, setContactNumber] = useState('');
   const [note, setNote] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
-  // EmailJS Configuration - Replace with your actual IDs
+  // EmailJS Configuration
   const EMAILJS_CONFIG = {
-    SERVICE_ID: 'service_3uvjq4b',      // Replace with your Service ID
-    TEMPLATE_ID: 'template_fuk77xu',    // Replace with your Template ID
-    PUBLIC_KEY: 'h1tB227NuN2rpN6eM'      // Replace with your Public Key
+    SERVICE_ID: 'service_3uvjq4b',
+    TEMPLATE_ID: 'template_fuk77xu',
+    PUBLIC_KEY: 'h1tB227NuN2rpN6eM'
   };
 
-  // Generate available time slots
-  const timeSlots = [
-    '09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '01:00 PM', '02:00 PM', '03:00 PM', '04:00 PM',
-    '05:00 PM', '06:00 PM', '07:00 PM', '08:00 PM'
+  // Location options
+  const locationOptions = [
+    { value: 'guest_home', label: 'My Home/Office' },
+    { value: 'university', label: 'University of Ruhuna' },
+    { value: 'other', label: 'Other Location' }
   ];
+
+  const handleDateSelect = (date) => {
+    const dateString = date.toISOString().split('T')[0];
+    
+    if (selectedDates.find(d => d.toISOString().split('T')[0] === dateString)) {
+      // Remove date if already selected
+      setSelectedDates(selectedDates.filter(d => d.toISOString().split('T')[0] !== dateString));
+    } else {
+      // Add date if not selected (limit to 5 dates)
+      if (selectedDates.length < 5) {
+        setSelectedDates([...selectedDates, date]);
+      }
+    }
+  };
 
   const sendEmailNotification = async (formData) => {
     try {
+      // Format dates for email
+      const formattedDates = formData.dates.map(date => {
+        return date.toLocaleDateString('en-US', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+      }).join('\n');
+
+      // Format location for email
+      let locationText = '';
+      switch (formData.location) {
+        case 'guest_home':
+          locationText = 'My Home/Office';
+          break;
+        case 'university':
+          locationText = 'University of Ruhuna';
+          break;
+        case 'other':
+          locationText = `Other Location: ${formData.otherLocationDetails}`;
+          break;
+        default:
+          locationText = 'Not specified';
+      }
+
       const templateParams = {
-        guest_name: 'Mr. Alahakoon',
-        selected_date: formData.date,
-        selected_time: formData.time,
+        guest_name: 'Mr. Malinda Alahakoon',
+        invitation_status: formData.invitationAccepted ? 'ACCEPTED' : 'DECLINED',
+        selected_dates: formattedDates,
+        selected_location: locationText,
+        contact_number: formData.contactNumber || 'Not provided',
         note: formData.note || 'No additional notes provided',
         submission_time: new Date().toLocaleString('en-US', {
           timeZone: 'UTC',
@@ -43,7 +88,7 @@ const Explore = () => {
           minute: '2-digit',
           second: '2-digit'
         }) + ' UTC',
-        submitted_by: 'She-han' // Current user
+        submitted_by: 'She-han'
       };
 
       console.log('Sending email with params:', templateParams);
@@ -65,8 +110,19 @@ const Explore = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!selectedDate || !selectedTime) {
-      alert('Please select both date and time');
+    
+    if (invitationAccepted === null) {
+      alert('Please accept or decline the invitation first');
+      return;
+    }
+
+    if (invitationAccepted && (selectedDates.length === 0 || !selectedLocation)) {
+      alert('Please select at least one date and location');
+      return;
+    }
+
+    if (invitationAccepted && selectedLocation === 'other' && !otherLocationDetails.trim()) {
+      alert('Please specify the other location details');
       return;
     }
 
@@ -74,29 +130,29 @@ const Explore = () => {
     setSubmitError('');
     
     const formData = {
-      date: selectedDate.toLocaleDateString('en-US', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }),
-      time: selectedTime,
+      invitationAccepted,
+      dates: selectedDates,
+      location: selectedLocation,
+      otherLocationDetails: otherLocationDetails,
+      contactNumber: contactNumber,
       note: note
     };
 
     try {
-      // Send email notification
       const emailResult = await sendEmailNotification(formData);
       
       if (emailResult.success) {
-        // Save to localStorage as backup
+        // Save to localStorage
         const submissions = JSON.parse(localStorage.getItem('podcastSubmissions') || '[]');
         submissions.push({
-          date: selectedDate.toISOString().split('T')[0],
-          time: selectedTime,
+          invitationAccepted,
+          dates: selectedDates.map(d => d.toISOString().split('T')[0]),
+          location: selectedLocation,
+          otherLocationDetails: otherLocationDetails,
+          contactNumber: contactNumber,
           note: note,
           timestamp: new Date().toISOString(),
-          guestName: 'Mr. Alahakoon',
+          guestName: 'Mr. Malinda Alahakoon',
           submittedBy: 'She-han',
           emailSent: true
         });
@@ -109,16 +165,19 @@ const Explore = () => {
       }
     } catch (error) {
       console.error('Submission failed:', error);
-      setSubmitError('Failed to send invitation. Please try again.');
+      setSubmitError('Failed to send response. Please try again.');
       
       // Save to localStorage even if email fails
       const submissions = JSON.parse(localStorage.getItem('podcastSubmissions') || '[]');
       submissions.push({
-        date: selectedDate.toISOString().split('T')[0],
-        time: selectedTime,
+        invitationAccepted,
+        dates: selectedDates.map(d => d.toISOString().split('T')[0]),
+        location: selectedLocation,
+        otherLocationDetails: otherLocationDetails,
+        contactNumber: contactNumber,
         note: note,
         timestamp: new Date().toISOString(),
-        guestName: 'Mr. Alahakoon',
+        guestName: 'Mr. Malinda Alahakoon',
         submittedBy: 'She-han',
         emailSent: false,
         error: error.message
@@ -264,15 +323,23 @@ const Explore = () => {
           <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-green-100 rounded-full">
             <Check className="w-10 h-10 text-green-600" />
           </div>
-          <h2 className="mb-4 text-2xl font-bold text-gray-800">Confirmation Sent!</h2>
+          <h2 className="mb-4 text-2xl font-bold text-gray-800">
+            {invitationAccepted ? 'Invitation Accepted!' : 'Response Sent!'}
+          </h2>
           <p className="mb-6 text-gray-600">
-            Your time slot confirmation has been successfully sent to VentureTalks Team. We've sent you a confirmation email soon.
+            {invitationAccepted 
+              ? 'Your availability has been successfully sent to VentureTalks Team. We will contact you soon to confirm the final details.'
+              : 'Thank you for your response. We understand and appreciate you taking the time to consider our invitation.'
+            }
           </p>
           <button
             onClick={() => {
               setIsSubmitted(false);
-              setSelectedDate(null);
-              setSelectedTime('');
+              setInvitationAccepted(null);
+              setSelectedDates([]);
+              setSelectedLocation('');
+              setOtherLocationDetails('');
+              setContactNumber('');
               setNote('');
               setSubmitError('');
             }}
@@ -286,23 +353,13 @@ const Explore = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 w-[100%] dark:bg-gray-900 ">
-      {/* Custom Styles */}
+    <div className="min-h-screen bg-gray-100 w-[100%] dark:bg-gray-900">
       <style dangerouslySetInnerHTML={{ __html: datePickerCustomStyles }} />
       
-      {/* Header 
-      <div className="bg-white shadow-lg">
-        <div className="max-w-6xl px-4 py-6 mx-auto">
-          <h1 className="text-3xl font-bold text-center text-transparent md:text-4xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text">
-            Podcast Guest Invitation
-          </h1>
-        </div>
-      </div>*/}
-
       <div className="w-[81%] py-8 mx-auto">
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Guest Profile Section */}
-          <div className="p-8 bg-white shadow-xl rounded-3xl ">
+          <div className="p-8 bg-white shadow-xl dark:bg-gray-800 rounded-3xl">
             <div className="mb-8 text-center">
               <div className="relative w-32 h-32 mx-auto mb-6">
                 <img
@@ -310,54 +367,35 @@ const Explore = () => {
                   alt="Mr. Alahakoon"
                   className="object-cover w-full h-full border-4 border-purple-600 rounded-full shadow-lg"
                 />
-              
               </div>
-              <h2 className="mb-2 text-2xl font-bold text-gray-800 md:text-3xl">Mr. Malinda Alahakoon</h2>
+              <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Mr. Malinda Alahakoon</h2>
               <p className="text-lg font-semibold text-purple-600">Education & Tech Expert</p>
             </div>
 
             <div className="space-y-6">
-              <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl">
-                <h3 className="flex items-center mb-4 text-xl font-bold text-gray-800">
-                 
-                  About Our Distinguished Guest
-                </h3>
-                <div className="space-y-4 font-medium leading-relaxed text-gray-700">
+              <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 rounded-2xl">
+                <div className="space-y-4 font-medium leading-relaxed text-gray-700 dark:text-gray-300">
                   <p>
-                    We deeply admire your extraordinary contributions to education and content creation in Sri 
-Lanka. With a science degree and over a decade of lecturing at prestigious universities, your 
-academic foundation is impressive. 
+                    We deeply admire your extraordinary contributions to education and content creation in Sri Lanka. With a science degree and over a decade of lecturing at prestigious universities, your academic foundation is impressive.
                   </p>
                   <p>
-                    Your ability to translate complex scientific and tech concepts into engaging video lessons is 
-exceptional. Your expertise in AI integration, as shown by your workshops and masterclasses, 
-highlights your forward-thinking approach.
+                    Your ability to translate complex scientific and tech concepts into engaging video lessons is exceptional. Your expertise in AI integration, as shown by your workshops and masterclasses, highlights your forward-thinking approach.
                   </p>
                   <p>
-                    Your guidance for aspiring entrepreneurs on business and monetization and your role as a 
-public speaker training others in digital content and branding, solidify your position as a leading 
-voice. Your active presence across various platforms further demonstrates your dedication to 
-education.
+                    Your guidance for aspiring entrepreneurs on business and monetization and your role as a public speaker training others in digital content and branding, solidify your position as a leading voice.
                   </p>
-                  <p>
-                    Mr. Alahakoon, your multifaceted contributions make you an invaluable asset to our country. 
-Your experiences and insights would be profoundly impactful for our audience.
-                  </p>
-                  <p className="font-semibold text-purple-700">
-    Therefore, we would be honored if you would consider joining us for a podcasting program 
-series. We believe your unique journey and perspectives would resonate profoundly with our 
-listeners and provide immense value to our discussions.
+                  <p className="font-semibold text-purple-700 dark:text-purple-300">
+                    Therefore, we would be honored if you would consider joining us for a podcasting program series. We believe your unique journey and perspectives would resonate profoundly with our listeners.
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
 
-          {/* Booking Section */}
-          <div className="p-8 bg-white shadow-xl rounded-3xl animate-slide-in-right">
-            <h3 className="mb-6 text-2xl font-bold text-center text-gray-800">
-              Select Your Preferred Time Slot
+          {/* Response Section */}
+          <div className="p-8 bg-white shadow-xl dark:bg-gray-800 rounded-3xl">
+            <h3 className="mb-6 text-2xl font-bold text-center text-gray-800 dark:text-white">
+              Podcast Invitation Response
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -368,93 +406,184 @@ listeners and provide immense value to our discussions.
                 </div>
               )}
 
-              {/* Date Selection */}
+              {/* Invitation Response */}
               <div>
-                <label className="flex items-center mb-3 text-sm font-semibold text-gray-700">
-                  <Calendar className="w-4 h-4 mr-2 text-purple-600" />
-                  Select Date
+                <label className="block mb-3 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  Do you accept this podcast invitation?
                 </label>
-                <div className="relative">
-                  <DatePicker
-                    selected={selectedDate}
-                    onChange={(date) => setSelectedDate(date)}
-                    minDate={new Date()}
-                    placeholderText="Choose a date"
-                    dateFormat="EEEE, MMMM d, yyyy"
-                    className="w-full p-4 transition-all duration-300 border border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    calendarClassName="shadow-lg"
-                    showPopperArrow={false}
-                    popperPlacement="bottom-start"
-                  />
-                  <Calendar className="absolute w-5 h-5 text-gray-400 transform -translate-y-1/2 pointer-events-none right-4 top-1/2" />
+                <div className="flex space-x-4">
+                  <button
+                    type="button"
+                    onClick={() => setInvitationAccepted(true)}
+                    className={`flex-1 p-4 rounded-xl font-medium transition-all duration-300 flex items-center justify-center ${
+                      invitationAccepted === true
+                        ? 'bg-green-500 text-white shadow-lg'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-green-900/30'
+                    }`}
+                  >
+                    <CheckCircle className="w-5 h-5 mr-2" />
+                    Yes, I Accept
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setInvitationAccepted(false)}
+                    className={`flex-1 p-4 rounded-xl font-medium transition-all duration-300 flex items-center justify-center ${
+                      invitationAccepted === false
+                        ? 'bg-red-500 text-white shadow-lg'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-red-50 dark:hover:bg-red-900/30'
+                    }`}
+                  >
+                    <XCircle className="w-5 h-5 mr-2" />
+                    No, I Decline
+                  </button>
                 </div>
               </div>
 
-              {/* Time Selection */}
-              <div>
-                <label className="flex items-center mb-3 text-sm font-semibold text-gray-700">
-                  <Clock className="w-4 h-4 mr-2 text-purple-600" />
-                  Select Time
-                </label>
-                <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
-                  {timeSlots.map((time, index) => (
-                    <button
-                      key={index}
-                      type="button"
-                      onClick={() => setSelectedTime(time)}
-                      className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
-                        selectedTime === time
-                          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                          : 'bg-gray-50 text-gray-700 hover:bg-purple-50 border border-gray-200'
-                      }`}
-                    >
-                      {time}
-                    </button>
-                  ))}
-                </div>
-              </div>
+              {/* Show scheduling options only if invitation is accepted */}
+              {invitationAccepted === true && (
+                <>
+                  {/* Date Selection */}
+                  <div>
+                    <label className="flex items-center mb-3 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      <Calendar className="w-4 h-4 mr-2 text-purple-600" />
+                      Select Your Available Dates in next 2 months (up to 5)
+                    </label>
+                    <div className="relative">
+                      <DatePicker
+                        selected={null}
+                        onChange={handleDateSelect}
+                        minDate={new Date()}
+                        placeholderText="Click to select multiple dates"
+                        dateFormat="EEEE, MMMM d, yyyy"
+                        className="w-full p-4 font-normal transition-all duration-300 border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        calendarClassName="shadow-lg"
+                        showPopperArrow={false}
+                        popperPlacement="bottom-start"
+                        highlightDates={selectedDates}
+                      />
+                      <Calendar className="absolute w-5 h-5 text-gray-400 transform -translate-y-1/2 pointer-events-none right-4 top-1/2" />
+                    </div>
+                    
+                    {/* Selected Dates Display */}
+                    {selectedDates.length > 0 && (
+                      <div className="mt-4 space-y-3">
+                        <h4 className="font-semibold text-gray-700 dark:text-gray-300">Selected Dates:</h4>
+                        <div className="space-y-2">
+                          {selectedDates.map((date, index) => (
+                            <div key={index} className="flex items-center justify-between p-3 border border-gray-200 dark:border-gray-600 rounded-xl bg-purple-50 dark:bg-purple-900/30">
+                              <span className="font-medium text-gray-800 dark:text-white">
+                                📅 {formatDateForDisplay(date)}
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => handleDateSelect(date)}
+                                className="text-sm font-medium text-red-500 hover:text-red-700"
+                              >
+                                Remove
+                              </button>
+                            </div>
+                          ))}
+                        </div>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                          {selectedDates.length}/5 dates selected
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Location Selection */}
+                  <div>
+                    <label className="flex items-center mb-3 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      <MapPin className="w-4 h-4 mr-2 text-purple-600" />
+                      Preferred Location
+                    </label>
+                    <div className="space-y-2">
+                      {locationOptions.map((location) => (
+                        <button
+                          key={location.value}
+                          type="button"
+                          onClick={() => setSelectedLocation(location.value)}
+                          className={`w-full p-4 text-left rounded-xl font-medium transition-all duration-300 ${
+                            selectedLocation === location.value
+                              ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
+                              : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 border border-gray-200 dark:border-gray-600'
+                          }`}
+                        >
+                          {location.label}
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Other Location Details */}
+                    {selectedLocation === 'other' && (
+                      <div className="mt-4">
+                        <label className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+                          Please specify the location:
+                        </label>
+                        <input
+                          type="text"
+                          value={otherLocationDetails}
+                          onChange={(e) => setOtherLocationDetails(e.target.value)}
+                          placeholder="e.g., Colombo Office, Hotel Conference Room, etc."
+                          className="w-full p-3 font-normal transition-all duration-300 border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Contact Number */}
+                  <div>
+                    <label className="flex items-center mb-3 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      <Phone className="w-4 h-4 mr-2 text-purple-600" />
+                      Contact Number (Optional)
+                    </label>
+                    <input
+                      type="tel"
+                      value={contactNumber}
+                      onChange={(e) => setContactNumber(e.target.value)}
+                      placeholder="e.g., +94 77 123 4567"
+                      className="w-full p-4 font-normal transition-all duration-300 border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    />
+                    <p className="mt-2 text-sm font-normal text-gray-500 dark:text-gray-400">
+                      We'll use this to coordinate the podcast recording session
+                    </p>
+                  </div>
+                </>
+              )}
 
               {/* Note Section */}
               <div>
-                <label className="flex items-center mb-3 text-sm font-semibold text-gray-700">
+                <label className="flex items-center mb-3 text-sm font-semibold text-gray-700 dark:text-gray-300">
                   <MessageSquare className="w-4 h-4 mr-2 text-purple-600" />
                   Additional Notes (Optional)
                 </label>
                 <textarea
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
-                  placeholder="Any specific topics you'd like to discuss or special requirements..."
-                  className="w-full p-4 font-normal transition-all duration-300 border border-gray-200 resize-none rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder={invitationAccepted === true 
+                    ? "Any specific topics you'd like to discuss or special requirements..."
+                    : "Thank you for considering our invitation. If you'd like to share any feedback or thoughts, please feel free to do so here."
+                  }
+                  className="w-full p-4 font-normal transition-all duration-300 border border-gray-200 resize-none dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   rows="4"
                 />
               </div>
 
-              {/* Selected Summary */}
-              {(selectedDate || selectedTime) && (
-                <div className="p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl animate-fade-in">
-                  <h4 className="mb-2 font-semibold text-gray-800">Selected Time Slot:</h4>
-                  <div className="text-purple-700">
-                    {selectedDate && <div>📅 {formatDateForDisplay(selectedDate)}</div>}
-                    {selectedTime && <div>🕐 {selectedTime}</div>}
-                  </div>
-                </div>
-              )}
-
               {/* Submit Button */}
               <button
                 type="submit"
-                disabled={isLoading || !selectedDate || !selectedTime}
-                className="w-full py-4 text-lg font-semibold text-white transition-all duration-300 transform bg-blue-600 shadow-lg rounded-xl hover:scale-105 hover:from-purple-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                disabled={isLoading || invitationAccepted === null}
+                className="w-full py-4 text-lg font-semibold text-white transition-all duration-300 transform bg-blue-600 shadow-lg rounded-xl hover:scale-105 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">
                     <div className="w-5 h-5 mr-2 border-2 border-white rounded-full border-t-transparent animate-spin"></div>
-                    Sending Confirmation...
+                    Sending Response...
                   </div>
                 ) : (
                   <div className="flex items-center justify-center">
                     <Send className="w-5 h-5 mr-2" />
-                    Confirm & Send
+                    {invitationAccepted === true ? 'Send Availability' : invitationAccepted === false ? 'Send Decline' : 'Send Response'}
                   </div>
                 )}
               </button>
@@ -469,26 +598,8 @@ listeners and provide immense value to our discussions.
           to { opacity: 1; transform: translateY(0); }
         }
         
-        @keyframes slide-in-left {
-          from { opacity: 0; transform: translateX(-50px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        
-        @keyframes slide-in-right {
-          from { opacity: 0; transform: translateX(50px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        
         .animate-fade-in {
           animation: fade-in 0.6s ease-out;
-        }
-        
-        .animate-slide-in-left {
-          animation: slide-in-left 0.8s ease-out;
-        }
-        
-        .animate-slide-in-right {
-          animation: slide-in-right 0.8s ease-out 0.2s both;
         }
       `}</style>
     </div>

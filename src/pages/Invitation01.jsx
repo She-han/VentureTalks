@@ -7,6 +7,7 @@ import Explore from './Explore'
 import Contact from '../vtcomponents/VTcontact'
 import Gototop from '../vtcomponents/Gototop'
 import Footer from '../vtcomponents/VTfooter'
+import Shorts from '../vtcomponents/Shorts'
 
 const Invitation01 = () => {
   return (
@@ -15,7 +16,7 @@ const Invitation01 = () => {
       <Hero />
     
       <About />
-  
+      <Shorts />
       <Explore/>
       <Contact/>
       <Footer />

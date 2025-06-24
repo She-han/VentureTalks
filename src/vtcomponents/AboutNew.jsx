@@ -179,7 +179,7 @@ const TabContent = ({ activeTab }) => {
   switch (activeTab) {
     case "venturetalks":
       return (
-        <div className="p-6 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
+        <div className=" bg-gray-50 dark:bg-gray-800">
           {/* Project Overview */}
           <section className="mb-16">
             <div className="mb-12 text-center">
@@ -208,7 +208,7 @@ const TabContent = ({ activeTab }) => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#02235f] dark:text-[#FD4101] text-lg">First Initiative: VentureTalks - Shorts</h4>
-                      <p className="text-gray-600 dark:text-gray-300">12 short videos covering tech insights, business perspectives, and success stories with increased publicity.</p>
+                      <p className="font-medium text-gray-600 dark:text-gray-300">12 short videos covering tech insights, business perspectives, and success stories with increased publicity.</p>
                     </div>
                   </div>
 
@@ -218,7 +218,7 @@ const TabContent = ({ activeTab }) => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#02235f] dark:text-[#FD4101] text-lg">Main Objective</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Host distinguished individuals from technology, computer science and business fields, focusing on their journeys to success and latest IT advancements.</p>
+                      <p className="font-medium text-gray-600 dark:text-gray-300">Host distinguished individuals from technology, computer science and business fields, focusing on their journeys to success and latest IT advancements.</p>
                     </div>
                   </div>
 
@@ -228,7 +228,7 @@ const TabContent = ({ activeTab }) => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#02235f] dark:text-[#FD4101] text-lg">Series Format</h4>
-                      <p className="text-gray-600 dark:text-gray-300">10 episodes, each approximately 30 minutes long, distributed across various social media platforms as complete episodes and short video snippets.</p>
+                      <p className="font-medium text-gray-600 dark:text-gray-300">10 episodes, each approximately 30 minutes long, distributed across various social media platforms as complete episodes and short video snippets.</p>
                     </div>
                   </div>
                 </div>
@@ -296,7 +296,7 @@ const TabContent = ({ activeTab }) => {
 
     case "cssc":
       return (
-        <div className="p-6 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
+        <div className=" bg-gray-50 dark:bg-gray-800">
           {/* Community Section */}
           <section className="mb-24">
             <div className="mb-12 text-center">
@@ -317,7 +317,7 @@ const TabContent = ({ activeTab }) => {
 
                 <div className="space-y-4">
                   <h4 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101]">What We Do</h4>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 font-normal">
                     <li className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-[#FD4101] rounded-full"></div>
                       <span className="text-gray-700 dark:text-gray-300">Tech talks and webinars by industry specialists</span>
@@ -373,7 +373,7 @@ const TabContent = ({ activeTab }) => {
             </div>
 
             <div className="mb-8">
-              <div className="bg-gradient-to-r from-[#02235f]/10 to-[#FD4101]/10 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6">
+              <div className="bg-gradient-to-r from-[#02235f]/10 to-[#FD4101]/10 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6 font-medium">
                 <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Hackthons</h3>
                 <p className="mb-4 text-gray-700 dark:text-gray-200">
                 Our community is renowned for spearheading events like the <strong>Rush Coder</strong> - the intra university hackathon 
@@ -419,7 +419,7 @@ const TabContent = ({ activeTab }) => {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-3">{event.title}</h3>
-                    <p className="leading-relaxed text-gray-600 dark:text-gray-300">{event.description}</p>
+                    <p className="font-normal leading-relaxed text-gray-600 dark:text-gray-300">{event.description}</p>
                   </div>
                 </div>
               ))}
@@ -491,7 +491,7 @@ const TabContent = ({ activeTab }) => {
 
     case "profiles":
       return (
-        <div className="p-6 mb-16 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
+        <div className=" bg-gray-50 dark:bg-gray-800">
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-6">Guest Profiles</h2>
             <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
@@ -562,7 +562,7 @@ const TabContent = ({ activeTab }) => {
                       {guest.achievements.map((achievement, idx) => (
                         <span 
                           key={idx}
-                          className="px-2 py-1 text-xs bg-[#02235f]/10 text-[#02235f] dark:bg-[#FD4101]/20 dark:text-[#FD4101] rounded-md"
+                          className="px-2 py-1 text-xs bg-[#02235f]/10 text-[#02235f] dark:bg-[#FD4101]/20 dark:text-[#a0c4f7] rounded-md"
                         >
                           {achievement}
                         </span>
@@ -571,7 +571,7 @@ const TabContent = ({ activeTab }) => {
                   </div>
 
                   {/* Action Button */}
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between ">
                     <button className="flex items-center space-x-2 text-[#FD4101] hover:text-[#02235f] transition-colors">
                       <Heart className="w-4 h-4" />
                       <span className="text-sm font-medium">Follow</span>
@@ -619,7 +619,8 @@ const About = () => {
       
       <div className="w-[81%] mx-auto my-16 ">
         {/* Tabs Navigation */}
-        <div className="flex items-center justify-around mb-6 space-x-6">
+        <div className="items-center justify-around p-6 mb-6 space-x-6 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
+          <div className="flex items-center justify-between w-full mb-6 lg:mb-16">
           <button
             onClick={() => setActiveTab("venturetalks")}
             className={`text-xl font-semibold ${
@@ -650,10 +651,8 @@ const About = () => {
           >
             Guest Profiles
           </button>
-        </div>
-
-        {/* Tab Content */}
-        <motion.div
+          </div>
+                  <motion.div
           variants={fadeIn}
           initial="hidden"
           animate="show"
@@ -661,6 +660,10 @@ const About = () => {
         >
           <TabContent activeTab={activeTab} />
         </motion.div>
+        </div>
+
+        {/* Tab Content */}
+
       </div>
      
    
