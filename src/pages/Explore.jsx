@@ -351,16 +351,6 @@ listeners and provide immense value to our discussions.
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <div className="p-4 text-center bg-purple-50 rounded-xl">
-                  <div className="text-2xl font-bold text-purple-600">10+</div>
-                  <div className="text-sm text-gray-600">Years Teaching</div>
-                </div>
-                <div className="p-4 text-center bg-blue-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600">AI</div>
-                  <div className="text-sm text-gray-600">Integration Expert</div>
-                </div>
-              </div>
             </div>
           </div>
 

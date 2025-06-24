@@ -74,8 +74,10 @@ const Hero = React.memo(() => {
               <a href={link} role="button">
                 {icon}
               </a>
+            
             </motion.button>
           ))}
+          <p>let us know when you are available</p>
         </div>
       </motion.div>
 

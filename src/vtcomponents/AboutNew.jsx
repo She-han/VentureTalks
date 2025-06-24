@@ -218,7 +218,7 @@ const TabContent = ({ activeTab }) => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#02235f] dark:text-[#FD4101] text-lg">Main Objective</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Host distinguished individuals from technology and computer science fields, focusing on their journeys to success and latest IT advancements.</p>
+                      <p className="text-gray-600 dark:text-gray-300">Host distinguished individuals from technology, computer science and business fields, focusing on their journeys to success and latest IT advancements.</p>
                     </div>
                   </div>
 
@@ -228,7 +228,7 @@ const TabContent = ({ activeTab }) => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-[#02235f] dark:text-[#FD4101] text-lg">Series Format</h4>
-                      <p className="text-gray-600 dark:text-gray-300">10 episodes, each approximately one hour long, distributed across various social media platforms as complete episodes and short video snippets.</p>
+                      <p className="text-gray-600 dark:text-gray-300">10 episodes, each approximately 30 minutes long, distributed across various social media platforms as complete episodes and short video snippets.</p>
                     </div>
                   </div>
                 </div>
