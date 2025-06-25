@@ -20,7 +20,7 @@ const Navbar = () => {
       </Link>
       <ul className="text-xl font-medium lg:ml-[500px] md:flex hidden">
         <li className="p-3 ">
-          <Link to="/invite01">Guest Invite Confirmation</Link>
+          <Link to="/invite01">Welcome!  Mr. Malinda,</Link>
         </li>
 
       </ul>
@@ -46,7 +46,7 @@ const Navbar = () => {
 
         <ul className="p-8 text-xl font-medium ">
           <li className="p-3 hover:text-[#2563eb] ">
-            <Link to="/invite01">Guest Invite Confirmation</Link>
+            <Link to="/invite01">Welcome! Mr. Malinda,</Link>
           </li>
 
         </ul>

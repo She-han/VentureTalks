@@ -24,8 +24,19 @@ const Hero = React.memo(() => {
     []
   );
 
+  // Function to scroll to form section
+  const scrollToForm = () => {
+    const formElement = document.getElementById('form');
+    if (formElement) {
+      formElement.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+  };
+
   return (
-    <div className="px-10 md:px-20 my-0 sm:my-24 max-w-[1400px] mx-auto flex flex-col-reverse sm:flex-row justify-between pt-0 md:pt-0 bg-gray-100 dark:bg-gray-900">
+    <div className=" lg:my-12 sm:my-24 max-w-[81%] mx-auto flex flex-col-reverse sm:flex-row justify-between pt-0 md:pt-0 bg-gray-100 dark:bg-gray-900">
       <motion.div
         variants={fadeIn("up", 0.1)}
         initial="hidden"
@@ -47,7 +58,9 @@ const Hero = React.memo(() => {
         <p className="mt-4 text-lg font-bold text-gray-500 md:text-2xl sm:text-xl">
           Computer Science Students' Community <br /> University of Ruhuna
         </p>
-        <div className="flex gap-8 text-3xl md:gap-12 lg:gap-16 md:text-4xl lg:text-5xl my-7 text-[#2563eb]">
+        
+        {/* Social Icons */}
+        <div className="flex gap-6 text-3xl md:gap-8 lg:gap-8 md:text-4xl lg:text-5xl my-7 text-[#2563eb]">
           {[
             {
               link: "https://www.linkedin.com/company/csscuor/posts/?feedView=all",
@@ -71,14 +84,22 @@ const Hero = React.memo(() => {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <a href={link} role="button">
+              <a href={link} role="button" target="_blank" rel="noopener noreferrer">
                 {icon}
               </a>
-            
             </motion.button>
           ))}
-          <p>let us know when you are available</p>
         </div>
+
+        {/* Availability Button */}
+        <motion.button
+          onClick={scrollToForm}
+          whileHover={{ scale: 1.05, y: -2 }}
+          whileTap={{ scale: 0.95 }}
+          className="px-8 py-4 mt-4 text-lg font-semibold text-white transition-all duration-300 transform shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl hover:from-blue-700 hover:to-purple-700 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+        >
+          Let us know when you are available
+        </motion.button>
       </motion.div>
 
       <motion.div

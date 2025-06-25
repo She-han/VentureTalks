@@ -50,7 +50,7 @@ const TabContent = ({ activeTab }) => {
       bio: "Over a decade of lecturing experience at prestigious universities with expertise in AI integration and digital content creation.",
       achievements: ["10+ Years Teaching", "AI Workshop Leader", "Digital Content Expert"],
       location: "Sri Lanka",
-      status: "Confirmed"
+      status: "Invited"
     },
  {
     id: 2,
@@ -189,7 +189,7 @@ const TabContent = ({ activeTab }) => {
             
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div className="space-y-6">
-                <div className="bg-gradient-to-r from-[#02235f]/5 to-[#FD4101]/5 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6">
+                <div className="bg-gradient-to-r from-[#02235f]/5 to-[#FD4101]/5 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-3 lg:p-6">
                   <h3 className="text-2xl font-bold text-[#02235f] dark:text-[#FD4101] mb-4 flex items-center">
                     <Lightbulb className="w-6 h-6 mr-3 text-[#FD4101]" />
                     About VentureTalks
@@ -570,7 +570,7 @@ const TabContent = ({ activeTab }) => {
                     </div>
                   </div>
 
-                  {/* Action Button */}
+                  {/* Action Button 
                   <div className="flex items-center justify-between ">
                     <button className="flex items-center space-x-2 text-[#FD4101] hover:text-[#02235f] transition-colors">
                       <Heart className="w-4 h-4" />
@@ -579,7 +579,7 @@ const TabContent = ({ activeTab }) => {
                     <button className="px-4 py-2 bg-[#FD4101] text-white text-sm font-medium rounded-lg hover:shadow-lg transition-all duration-300">
                       View Full Profile
                     </button>
-                  </div>
+                  </div>*/}
                 </div>
               </div>
             ))}
@@ -619,8 +619,8 @@ const About = () => {
       
       <div className="w-[81%] mx-auto my-16 ">
         {/* Tabs Navigation */}
-        <div className="items-center justify-around p-6 mb-6 space-x-6 shadow-xl bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
-          <div className="flex items-center justify-between w-full mb-6 lg:mb-16">
+        <div className="items-center justify-center p-3 mb-6 shadow-xl lg:space-x-6 bg-gray-50 dark:bg-gray-800 md:p-10 rounded-3xl">
+          <div className="flex items-center justify-between w-full gap-2 mb-6 lg:mb-16">
           <button
             onClick={() => setActiveTab("venturetalks")}
             className={`text-xl font-semibold ${

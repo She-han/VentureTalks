@@ -85,7 +85,7 @@ const Contact = () => {
               <HiPhone className="w-8 h-8 md:w-10 md:h-10" />
               <div className="ml-4 text-sm tracking-wide sm:text-base">
                 <a href="tel:+94123456789" className="cursor-pointer">
-                  +94 123 456 789
+                  +94 76 276 5844
                 </a>
               </div>
             </div>

@@ -353,7 +353,7 @@ const Explore = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 w-[100%] dark:bg-gray-900">
+    <div className="min-h-screen bg-gray-100 w-[100%] dark:bg-gray-900" id="form">
       <style dangerouslySetInnerHTML={{ __html: datePickerCustomStyles }} />
       
       <div className="w-[81%] py-8 mx-auto">
