@@ -88,7 +88,7 @@ const Explore = () => {
           minute: '2-digit',
           second: '2-digit'
         }) + ' UTC',
-        submitted_by: 'She-han'
+        submitted_by: 'Malinda'
       };
 
       console.log('Sending email with params:', templateParams);
@@ -153,7 +153,7 @@ const Explore = () => {
           note: note,
           timestamp: new Date().toISOString(),
           guestName: 'Mr. Malinda Alahakoon',
-          submittedBy: 'She-han',
+          submittedBy: 'Malinda',
           emailSent: true
         });
         localStorage.setItem('podcastSubmissions', JSON.stringify(submissions));

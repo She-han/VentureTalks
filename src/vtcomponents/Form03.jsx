@@ -3,7 +3,7 @@ import { Calendar, MessageSquare, Send, Check, MapPin, CheckCircle, XCircle, Pho
 import DatePicker from 'react-datepicker';
 import emailjs from '@emailjs/browser';
 import "react-datepicker/dist/react-datepicker.css";
-import img from '../assets/malinda_pic.jpg';
+import img from '../assets/shalin-1.jpg';
 
 const Explore = () => {
   const [invitationAccepted, setInvitationAccepted] = useState(null); // null, true, false
@@ -73,7 +73,7 @@ const Explore = () => {
       }
 
       const templateParams = {
-        guest_name: 'Mr. Malinda Alahakoon',
+        guest_name: 'Mr. Shalin Balasuriya',
         invitation_status: formData.invitationAccepted ? 'ACCEPTED' : 'DECLINED',
         selected_dates: formattedDates,
         selected_location: locationText,
@@ -88,7 +88,7 @@ const Explore = () => {
           minute: '2-digit',
           second: '2-digit'
         }) + ' UTC',
-        submitted_by: 'She-han'
+        submitted_by: 'Shalin'
       };
 
       console.log('Sending email with params:', templateParams);
@@ -152,8 +152,8 @@ const Explore = () => {
           contactNumber: contactNumber,
           note: note,
           timestamp: new Date().toISOString(),
-          guestName: 'Mr. Malinda Alahakoon',
-          submittedBy: 'She-han',
+          guestName: 'Mr. Shalin Balasuriya',
+          submittedBy: 'Shalin',
           emailSent: true
         });
         localStorage.setItem('podcastSubmissions', JSON.stringify(submissions));
@@ -177,8 +177,8 @@ const Explore = () => {
         contactNumber: contactNumber,
         note: note,
         timestamp: new Date().toISOString(),
-        guestName: 'Mr. Malinda Alahakoon',
-        submittedBy: 'Malinda',
+        guestName: 'Mr. Shalin Balasuriya',
+        submittedBy: 'Shalin',
         emailSent: false,
         error: error.message
       });
@@ -368,24 +368,31 @@ const Explore = () => {
                   className="object-cover w-full h-full border-4 border-purple-600 rounded-full shadow-lg"
                 />
               </div>
-              <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Mr. Malinda Alahakoon</h2>
-              <p className="text-lg font-semibold text-purple-600">Education & Tech Expert</p>
+              <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Mr. Shalin Balasuriya</h2>
+              <p className="text-lg font-semibold text-purple-600">Co-Founder of Spa Ceylon</p>
             </div>
 
             <div className="space-y-6">
               <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 rounded-2xl">
                 <div className="space-y-4 font-medium leading-relaxed text-gray-700 dark:text-gray-300">
                   <p>
-                    We deeply admire your extraordinary contributions to education and content creation in Sri Lanka. With a science degree and over a decade of lecturing at prestigious universities, your academic foundation is impressive.
+                    Your journey as the co-founder of Spa Ceylon is truly awe-inspiring. Through your visionary 
+                    leadership, you have taken the essence of Sri Lankan Ayurveda and shared it with the world—
+                    reaching over 33 countries and creating a global presence that celebrates our island’s rich 
+                    heritage. Your commitment to natural wellness, elegant branding, and cultural storytelling has 
+                    not only elevated the Sri Lankan name on the international stage but also made it a symbol of 
+                    luxury and peace. Beyond your entrepreneurial success, your advocacy for workplace wellness 
+                    and your vibrant presence on social media reflect the depth of your passion for uplifting others, 
+                    both personally and professionally.
                   </p>
                   <p>
-                    Your ability to translate complex scientific and tech concepts into engaging video lessons is exceptional. Your expertise in AI integration, as shown by your workshops and masterclasses, highlights your forward-thinking approach.
+                    We believe your voice and your story would bring incredible value to our podcast series. It 
+                    would be an absolute honor to have you share your experiences, insights, and wisdom with our 
+                    listeners. With great respect and admiration, we warmly invite you to be a part of our program.
                   </p>
-                  <p>
-                    Your guidance for aspiring entrepreneurs on business and monetization and your role as a public speaker training others in digital content and branding, solidify your position as a leading voice.
-                  </p>
+
                   <p className="font-semibold text-purple-700 dark:text-purple-300">
-                    Therefore, we would be honored if you would consider joining us for a podcasting program series. We believe your unique journey and perspectives would resonate profoundly with our listeners.
+                    
                   </p>
                 </div>
               </div>

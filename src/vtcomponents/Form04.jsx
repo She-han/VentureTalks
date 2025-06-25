@@ -3,7 +3,7 @@ import { Calendar, MessageSquare, Send, Check, MapPin, CheckCircle, XCircle, Pho
 import DatePicker from 'react-datepicker';
 import emailjs from '@emailjs/browser';
 import "react-datepicker/dist/react-datepicker.css";
-import img from '../assets/malinda_pic.jpg';
+import img from '../assets/dhanika.jpeg';
 
 const Explore = () => {
   const [invitationAccepted, setInvitationAccepted] = useState(null); // null, true, false
@@ -73,7 +73,7 @@ const Explore = () => {
       }
 
       const templateParams = {
-        guest_name: 'Mr. Malinda Alahakoon',
+        guest_name: 'Mr. Dhanika Perera',
         invitation_status: formData.invitationAccepted ? 'ACCEPTED' : 'DECLINED',
         selected_dates: formattedDates,
         selected_location: locationText,
@@ -88,7 +88,7 @@ const Explore = () => {
           minute: '2-digit',
           second: '2-digit'
         }) + ' UTC',
-        submitted_by: 'She-han'
+        submitted_by: 'Dhanika'
       };
 
       console.log('Sending email with params:', templateParams);
@@ -152,8 +152,8 @@ const Explore = () => {
           contactNumber: contactNumber,
           note: note,
           timestamp: new Date().toISOString(),
-          guestName: 'Mr. Malinda Alahakoon',
-          submittedBy: 'She-han',
+          guestName: 'Mr. Dhanika Perera',
+          submittedBy: 'Dhanika',
           emailSent: true
         });
         localStorage.setItem('podcastSubmissions', JSON.stringify(submissions));
@@ -177,8 +177,8 @@ const Explore = () => {
         contactNumber: contactNumber,
         note: note,
         timestamp: new Date().toISOString(),
-        guestName: 'Mr. Malinda Alahakoon',
-        submittedBy: 'Malinda',
+        guestName: 'Mr. Dhanika Perera',
+        submittedBy: 'Dhanika',
         emailSent: false,
         error: error.message
       });
@@ -368,24 +368,42 @@ const Explore = () => {
                   className="object-cover w-full h-full border-4 border-purple-600 rounded-full shadow-lg"
                 />
               </div>
-              <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Mr. Malinda Alahakoon</h2>
-              <p className="text-lg font-semibold text-purple-600">Education & Tech Expert</p>
+              <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Mr. Dhanika Perera</h2>
+              <p className="text-lg font-semibold text-purple-600">Founder of Bhasha Lanka & Tech Innovator</p>
             </div>
 
             <div className="space-y-6">
               <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 rounded-2xl">
                 <div className="space-y-4 font-medium leading-relaxed text-gray-700 dark:text-gray-300">
                   <p>
-                    We deeply admire your extraordinary contributions to education and content creation in Sri Lanka. With a science degree and over a decade of lecturing at prestigious universities, your academic foundation is impressive.
+                    We are truly honored to reach out to someone who has made such an extraordinary impact on 
+                    Sri Lanka’s digital landscape. Your visionary journey—from founding Bhasha Lanka (Pvt) Ltd 
+                    while still an undergraduate, to creating revolutionary platforms like Helakuru and PayHere—is 
+                    nothing short of inspiring.
                   </p>
                   <p>
-                    Your ability to translate complex scientific and tech concepts into engaging video lessons is exceptional. Your expertise in AI integration, as shown by your workshops and masterclasses, highlights your forward-thinking approach.
+                   Through your work, you have given millions of Sinhala-speaking Sri Lankans the power to 
+embrace technology in their own language. Helakuru has become more than just a keyboard; 
+it’s a cultural milestone that has transformed the way people communicate in Sinhala. And with 
+PayHere, you have made it easier than ever for businesses across the island to thrive in the 
+digital economy, helping drive innovation and entrepreneurship forward. 
                   </p>
+                                    <p>
+Your dedication to championing local innovation, supporting young entrepreneurs, and 
+advancing the use of Sinhala in the digital space has created a lasting legacy—one that deeply 
+resonates with all of us who believe in the potential of Sri Lanka’s tech future.
+                  </p>
+
                   <p>
-                    Your guidance for aspiring entrepreneurs on business and monetization and your role as a public speaker training others in digital content and branding, solidify your position as a leading voice.
+                    It would be a great privilege to have you as a guest on our podcast series. We believe your story, 
+experiences, and insights could truly inspire the next generation of creators, developers, and 
+dreamers in this country. Your presence would add immense value to our program, and we 
+would be delighted to feature your voice in this important conversation. 
+With sincere appreciation and warm regards, 
+We respectfully invite you to join us on our podcasting journey. 
                   </p>
                   <p className="font-semibold text-purple-700 dark:text-purple-300">
-                    Therefore, we would be honored if you would consider joining us for a podcasting program series. We believe your unique journey and perspectives would resonate profoundly with our listeners.
+                    
                   </p>
                 </div>
               </div>

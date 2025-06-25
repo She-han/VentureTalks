@@ -3,13 +3,13 @@ import Navbar from '../vtcomponents/InviteNavbar'
 import Hero from '../vtcomponents/VThero'
 
 import About from '../vtcomponents/AboutNew'
-import Form from '../vtcomponents/Form01'
+import Form from '../vtcomponents/Form02'
 import Contact from '../vtcomponents/VTcontact'
 import Gototop from '../vtcomponents/Gototop'
 import Footer from '../vtcomponents/VTfooter'
 import Shorts from '../vtcomponents/Shorts'
 
-const Invitation01 = () => {
+const Invitation02 = () => {
   return (
     <div>
       <Navbar />
@@ -27,4 +27,4 @@ const Invitation01 = () => {
   )
 }
 
-export default Invitation01
+export default Invitation02

@@ -3,7 +3,7 @@ import { Calendar, MessageSquare, Send, Check, MapPin, CheckCircle, XCircle, Pho
 import DatePicker from 'react-datepicker';
 import emailjs from '@emailjs/browser';
 import "react-datepicker/dist/react-datepicker.css";
-import img from '../assets/malinda_pic.jpg';
+import img from '../assets/hameed_pic.jpeg';
 
 const Explore = () => {
   const [invitationAccepted, setInvitationAccepted] = useState(null); // null, true, false
@@ -73,7 +73,7 @@ const Explore = () => {
       }
 
       const templateParams = {
-        guest_name: 'Mr. Malinda Alahakoon',
+        guest_name: 'Mr. Fouzul Hameed',
         invitation_status: formData.invitationAccepted ? 'ACCEPTED' : 'DECLINED',
         selected_dates: formattedDates,
         selected_location: locationText,
@@ -88,7 +88,7 @@ const Explore = () => {
           minute: '2-digit',
           second: '2-digit'
         }) + ' UTC',
-        submitted_by: 'She-han'
+        submitted_by: 'Fouzul'
       };
 
       console.log('Sending email with params:', templateParams);
@@ -152,8 +152,8 @@ const Explore = () => {
           contactNumber: contactNumber,
           note: note,
           timestamp: new Date().toISOString(),
-          guestName: 'Mr. Malinda Alahakoon',
-          submittedBy: 'She-han',
+          guestName: 'Mr. Fouzul Hameed',
+          submittedBy: 'Fouzul',
           emailSent: true
         });
         localStorage.setItem('podcastSubmissions', JSON.stringify(submissions));
@@ -177,8 +177,8 @@ const Explore = () => {
         contactNumber: contactNumber,
         note: note,
         timestamp: new Date().toISOString(),
-        guestName: 'Mr. Malinda Alahakoon',
-        submittedBy: 'Malinda',
+        guestName: 'Mr. Fouzul Hameed',
+        submittedBy: 'Fouzul',
         emailSent: false,
         error: error.message
       });
@@ -368,24 +368,40 @@ const Explore = () => {
                   className="object-cover w-full h-full border-4 border-purple-600 rounded-full shadow-lg"
                 />
               </div>
-              <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Mr. Malinda Alahakoon</h2>
-              <p className="text-lg font-semibold text-purple-600">Education & Tech Expert</p>
+              <h2 className="mb-2 text-2xl font-bold text-gray-800 dark:text-white md:text-3xl">Mr. Fouzul Hameed</h2>
+              <p className="text-lg font-semibold text-purple-600">Chairman of Hameedia Group</p>
             </div>
 
             <div className="space-y-6">
               <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 rounded-2xl">
                 <div className="space-y-4 font-medium leading-relaxed text-gray-700 dark:text-gray-300">
                   <p>
-                    We deeply admire your extraordinary contributions to education and content creation in Sri Lanka. With a science degree and over a decade of lecturing at prestigious universities, your academic foundation is impressive.
+                    We deeply admire your extraordinary contributions to Sri Lanka, transforming Hameedia Group 
+from a family tailoring shop into an internationally recognized fashion powerhouse. Your 
+visionary leadership is evident in the diverse brand portfolio and global expansion of Envoy 
+London. 
                   </p>
                   <p>
-                    Your ability to translate complex scientific and tech concepts into engaging video lessons is exceptional. Your expertise in AI integration, as shown by your workshops and masterclasses, highlights your forward-thinking approach.
+                   Beyond your remarkable success in fashion, your commitment to social responsibility through 
+the My Friend Foundation and the "English for All" program is truly commendable, uplifting 
+thousands of underprivileged children. Your achievements have earned Hameedia numerous 
+accolades, making it a pioneering force in the industry. Your personal philosophy of honesty and 
+ethical business practices, coupled with your dedication to community, sets a powerful example 
+for all.
                   </p>
+                                    <p>
+Mr. Hameed, your multifaceted contributions make you an invaluable icon in Sri Lanka. Your 
+experiences and insights would be profoundly impactful for our audience.
+                  </p>
+
                   <p>
-                    Your guidance for aspiring entrepreneurs on business and monetization and your role as a public speaker training others in digital content and branding, solidify your position as a leading voice.
+                   Therefore, we would be honored if you would consider joining us for a podcasting program 
+series. We believe your unique journey and perspectives would resonate profoundly with our 
+listeners and provide immense value to our discussions. We eagerly await the opportunity to 
+discuss this further with you at your convenience.
                   </p>
                   <p className="font-semibold text-purple-700 dark:text-purple-300">
-                    Therefore, we would be honored if you would consider joining us for a podcasting program series. We believe your unique journey and perspectives would resonate profoundly with our listeners.
+                    
                   </p>
                 </div>
               </div>
