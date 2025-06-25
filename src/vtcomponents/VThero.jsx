@@ -75,7 +75,7 @@ const Hero = React.memo(() => {
               icon: <AiFillFacebook />,
             },
             {
-              link: "https://www.instagram.com",
+              link: "https://www.instagram.com/csscuor/",
               icon: <AiFillInstagram />,
             },
           ].map(({ link, icon }, index) => (

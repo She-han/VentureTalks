@@ -17,9 +17,9 @@ import {
   Building,
   GraduationCap,
   Lightbulb,
-  MapPin,
+  MapPin
   
-  Heart
+  
 } from 'lucide-react';
 
 

@@ -34,7 +34,7 @@ const Footer = () => {
                 <FaYoutube size={30} />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/csscuor/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#FD4101]"
