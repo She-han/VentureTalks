@@ -3,10 +3,14 @@ import React from "react";
 const Shorts = () => {
   // Your YouTube Shorts video IDs
   const shortsIds = [
-    "XrJpnRO5QsE",
+      "XrJpnRO5QsE",
     "5ud53ZSDu1M", 
+    
+    "KBVG__8rfus",
     "Rr5Ja2RW8zY",
-    "KBVG__8rfus"
+     "26_Huwpd1-E"
+    
+
   ];
 
   return (
@@ -16,7 +20,7 @@ const Shorts = () => {
         <p className="text-gray-600 dark:text-gray-300">Check out our latest short videos</p>
       </div>
       
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-5">
         {shortsIds.map((videoId, index) => (
           <div key={index} className="relative group">
             <div className="aspect-[9/16] bg-black rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -32,10 +36,7 @@ const Shorts = () => {
               ></iframe>
             </div>
             
-            {/* Optional overlay with video number */}
-            <div className="absolute px-2 py-1 text-xs text-white rounded-md top-2 left-2 bg-black/60">
-              #{index + 1}
-            </div>
+          
             
             {/* View on YouTube button (appears on hover) */}
             <div className="absolute transition-opacity duration-300 opacity-0 bottom-2 right-2 group-hover:opacity-100">
