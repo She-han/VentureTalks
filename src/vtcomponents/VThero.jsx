@@ -60,7 +60,7 @@ const Hero = React.memo(() => {
         </p>
         
         {/* Social Icons */}
-        <div className="flex gap-6 text-3xl md:gap-8 lg:gap-8 md:text-4xl lg:text-5xl my-7 text-[#2563eb]">
+        <div className="flex gap-6 text-3xl md:gap-8 lg:gap-8 md:text-4xl lg:text-5xl my-3 text-[#2563eb]">
           {[
             {
               link: "https://www.linkedin.com/company/csscuor/posts/?feedView=all",

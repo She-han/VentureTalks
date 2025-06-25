@@ -374,7 +374,7 @@ const TabContent = ({ activeTab }) => {
 
             <div className="mb-8">
               <div className="bg-gradient-to-r from-[#02235f]/10 to-[#FD4101]/10 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6 font-medium">
-                <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Hackthons</h3>
+                <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Hackathons</h3>
                 <p className="mb-4 text-gray-700 dark:text-gray-200">
                 Our community is renowned for spearheading events like the <strong>Rush Coder</strong> - the intra university hackathon 
                 and the latest <strong>Insurgex 1.0</strong> - the intra university hackathon, which expanded our horizons.

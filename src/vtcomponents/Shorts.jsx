@@ -16,7 +16,7 @@ const Shorts = () => {
   return (
     <div className="justify-center items-center mx-auto max-w-[81%] pt-8 mb-12">
       <div className="mb-8 text-center">
-        <h2 className="mb-4 text-3xl font-bold text-gray-800 dark:text-white">Our Shorts</h2>
+        <h2 className="mb-4 text-3xl font-bold text-[#02235f] dark:text-white">Our Shorts</h2>
         <p className="text-gray-600 dark:text-gray-300">Check out our latest short videos</p>
       </div>
       
