@@ -384,7 +384,7 @@ const Explore = () => {
                   <p>
                     Your guidance for aspiring entrepreneurs on business and monetization and your role as a public speaker training others in digital content and branding, solidify your position as a leading voice.
                   </p>
-                  <p className="font-semibold text-purple-700 dark:text-purple-300">
+                  <p >
                     Therefore, we would be honored if you would consider joining us for a podcasting program series. We believe your unique journey and perspectives would resonate profoundly with our listeners.
                   </p>
                 </div>

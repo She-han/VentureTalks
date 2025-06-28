@@ -366,7 +366,7 @@ const TabContent = ({ activeTab }) => {
         
       src={ruh}
       alt="University of Ruhuna" 
-      className="object-contain w-48 h-32 "
+      className="object-contain w-20 h-16 xl:w-64 xl:h-32 md:w-36 md:h-24"
     
    
       
@@ -375,7 +375,7 @@ const TabContent = ({ activeTab }) => {
 <img
    src={cssc}
       alt="CSSC Logo" 
-      className="object-contain w-64 h-48 mr-4"
+      className="object-contain w-20 h-24 mr-4 xl:w-64 xl:h-48 md:w-36 md:h-32"
 />
   </div>
   
