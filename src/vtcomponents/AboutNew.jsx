@@ -359,7 +359,7 @@ const TabContent = ({ activeTab }) => {
       </div>
 
       <div className="space-y-6 lg:space-y-8">
-      <div className="bg-[#ffffff] rounded-2xl p-8 text-[#02235f] text-center relative overflow-hidden shadow-lg border-[#02235f]/30 border-2" >
+      <div className="bg-[#ffffff] rounded-2xl p-8 text-[#02235f] dark:bg-gray-600 text-center relative overflow-hidden shadow-lg border-[#02235f]/30 border-2" >
   {/* Both Logos displayed above content */}
   <div className="flex items-center justify-center gap-8 mb-9">
     <img 
