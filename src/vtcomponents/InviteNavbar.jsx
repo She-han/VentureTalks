@@ -3,6 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Slider.css";
 import DarkModeToggle from "./DarkModeToggle";
+import logo from "../assets/logoo.png"; 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -12,8 +13,9 @@ const Navbar = () => {
 
   return (
     <nav className=" bg-opacity-95 text-gray-200  flex justify-between items-center  h-24 px-4 lg:px-20 xl:px-36 text-l top-0 z-[8] bg-[#02235f] shadow-[0_4px_30px_rgba(0,0,0,0.1)]  lg:rounded-b-[108px]">
+      <img src={logo} alt="Venture Talks Logo" className="items-center w-14 h-14" />
       <Link
-        to="/"
+        to="/invite01"
         className="m-2 text-2xl md:text-3xl lg:text-4xl font-bold text-[#FD4101] uppercase"
       >
         Venture Talks
@@ -22,10 +24,12 @@ const Navbar = () => {
         <li className="p-3 ">
           <Link to="/invite01">Welcome!  </Link>
         </li>
-
       </ul>
 
-      <DarkModeToggle />
+      {/* Dark Mode Toggle - Only visible on desktop */}
+      <div className="hidden md:block">
+        <DarkModeToggle />
+      </div>
 
       <div onClick={handleNav} className="block md:hidden z-99">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -45,11 +49,18 @@ const Navbar = () => {
         </a>
 
         <ul className="p-8 text-xl font-medium ">
-          <li className="p-3 hover:text-[#2563eb] ">
+          <li className=" hover:text-[#2563eb] ">
             <Link to="/invite01">Welcome!</Link>
           </li>
-
         </ul>
+
+        {/* Dark Mode Toggle - Only visible in mobile sliding menu */}
+        <div className="px-8 py-4 border-t border-gray-300 dark:border-gray-700">
+          <div className="flex items-center justify-between">
+            <span className="text-lg font-medium">Dark Mode</span>
+            <DarkModeToggle />
+          </div>
+        </div>
       </div>
     </nav>
   );

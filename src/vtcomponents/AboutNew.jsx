@@ -17,7 +17,8 @@ import {
   Building,
   GraduationCap,
   Lightbulb,
-  MapPin
+  MapPin,
+  Trophy
   
   
 } from 'lucide-react';
@@ -35,6 +36,9 @@ import rp2 from "../assets/sanjeewa_pic.webp";
 import rp3 from "../assets/shalin-1.jpg";
 import rp4 from "../assets/dhanika.jpeg";
 import rp5 from "../assets/hameed_pic.jpeg";
+
+import ruh from "../assets/OIP.png";
+import cssc from "../assets/CSSC Logo.png";
 
 
 
@@ -296,197 +300,234 @@ const TabContent = ({ activeTab }) => {
 
     case "cssc":
       return (
-        <div className=" bg-gray-50 dark:bg-gray-800">
-          {/* Community Section */}
-          <section className="mb-24">
-            <div className="mb-12 text-center">
-              <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-6">Our Community</h2>
-              <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
-            </div>
+<div className="bg-gray-50 dark:bg-gray-800">
+  {/* Community Section */}
+  <section className="mb-24">
+    <div className="mb-12 text-center">
+      <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-6">Our Community</h2>
+      <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
+    </div>
 
-            <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-[#02235f]/10 to-[#FD4101]/10 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6">
-                  <h3 className="text-2xl font-bold text-[#02235f] dark:text-[#FD4101] mb-4">About CSSC</h3>
-                  <p className="leading-relaxed text-gray-700 dark:text-gray-200">
-                    The <strong>Computer Science Students' Community</strong> of the University of Ruhuna is a newly established 
-                    society under the Department of Computer Science. This is a collaborative community that enhances 
-                    the opportunities, knowledge, and awareness of undergraduates in computer science and information technology.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <h4 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101]">What We Do</h4>
-                  <ul className="space-y-3 font-normal">
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#FD4101] rounded-full"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Tech talks and webinars by industry specialists</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#02235f] rounded-full"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Seminars and hands-on training sessions</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#FD4101] rounded-full"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Hackathons and coding competitions</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-[#02235f] rounded-full"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Professional and educational growth programs</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="space-y-6 lg:space-y-8">
-                <div className="bg-[#02235f] rounded-2xl p-8 text-white text-center">
-                  <Users className="w-16 h-16 mx-auto mb-4" />
-                  <div className="mb-2 text-5xl font-bold">450+</div>
-                  <div className="text-xl">Active Members</div>
-                  <p className="mt-4 text-blue-100">
-                    One of the most outstanding societies at the University of Ruhuna
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white dark:bg-gray-700 border-2 border-[#02235f]/20 rounded-xl p-4 text-center">
-                    <GraduationCap className="w-8 h-8 text-[#02235f] mx-auto mb-2" />
-                    <div className="text-lg font-bold text-[#02235f] dark:text-[#FD4101]">Academic</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">Excellence</div>
-                  </div>
-                  <div className="bg-white dark:bg-gray-700 border-2 border-[#FD4101]/20 rounded-xl p-4 text-center">
-                    <Code className="w-8 h-8 text-[#FD4101] mx-auto mb-2" />
-                    <div className="text-lg font-bold text-[#FD4101]">Technical</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-300">Innovation</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Past Events Section */}
-          <section className="mb-16 ">
-            <div className="mb-12 text-center">
-              <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-4">Past Events</h2>
-              <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
- 
-            </div>
-
-            <div className="mb-8">
-              <div className="bg-gradient-to-r from-[#02235f]/10 to-[#FD4101]/10 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6 font-medium">
-                <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Hackathons</h3>
-                <p className="mb-4 text-gray-700 dark:text-gray-200">
-                Our community is renowned for spearheading events like the <strong>Rush Coder</strong> - the intra university hackathon 
-                and the latest <strong>Insurgex 1.0</strong> - the intra university hackathon, which expanded our horizons.
-                </p>
-                <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Special Collaborations</h3>
-                <p className="mb-4 text-gray-700 dark:text-gray-200">
-                  In collaboration with the <strong>Google Developers Group</strong>, we offered top-tier workshops. 
-                  
-                </p>
-                <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Cultural Events</h3>
-                <p className="mb-4 text-gray-700 dark:text-gray-200">
-                 Our cultural flair is showcased in <strong>"Padura,"</strong> an event blending creativity with the arts.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {pastEvents.map((event, index) => (
-                <div 
-                  key={event.id}
-                  className="overflow-hidden transition-all duration-300 bg-white shadow-lg dark:bg-gray-700 rounded-2xl hover:shadow-xl hover:scale-105"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="relative">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="object-cover w-full h-48"
-                    />
-                    <div className="absolute top-4 right-4">
-                      <span className={`px-3 py-1 text-xs font-semibold rounded-full text-white ${
-                        event.category === 'Hackathon' ? 'bg-[#FD4101]' :
-                        event.category === 'Workshop' ? 'bg-[#02235f]' :
-                        event.category === 'Cultural' ? 'bg-purple-500' :
-                        event.category === 'Competition' ? 'bg-green-500' :
-                        event.category === 'Outreach' ? 'bg-blue-500' :
-                        'bg-gray-500'
-                      }`}>
-                        {event.category}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-3">{event.title}</h3>
-                    <p className="font-normal leading-relaxed text-gray-600 dark:text-gray-300">{event.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Photo Gallery 
-          <div className="grid grid-cols-1 gap-4 mt-8 bg-gray-200 rounded-lg md:grid-cols-3 dark:bg-gray-800">
-            <div className="grid grid-rows-2 gap-4">
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={cs1}
-                  alt="CSSC Event 1"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={cs2}
-                  alt="CSSC Event 2"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-rows-3 gap-4">
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={cs3}
-                  alt="CSSC Event 3"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={cs4}
-                  alt="CSSC Event 4"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={cs7}
-                  alt="CSSC Event 7"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-rows-2 gap-4">
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={cs6}
-                  alt="CSSC Event 6"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={cs5}
-                  alt="CSSC Event 5"
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </div>
-          </div>*/}
+    <div className="grid items-center gap-12 lg:grid-cols-2">
+      <div className="space-y-6">
+        <div className="bg-gradient-to-r from-[#02235f]/10 to-[#FD4101]/10 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6 relative">
+          {/* University Logo in About CSSC section */}
+  
+          <h3 className="text-2xl font-bold text-[#02235f] dark:text-[#FD4101] mb-4">About CSSC</h3>
+          <p className="leading-relaxed text-gray-700 dark:text-gray-200">
+            The <strong>Computer Science Students' Community</strong> of the University of Ruhuna is a newly established 
+            society under the Department of Computer Science. This is a collaborative community that enhances 
+            the opportunities, knowledge, and awareness of undergraduates in computer science and information technology.
+          </p>
         </div>
+
+        <div className="space-y-4">
+          <h4 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101]">What We Do</h4>
+          <ul className="space-y-3 font-normal">
+            <li className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-[#FD4101] rounded-full"></div>
+              <span className="text-gray-700 dark:text-gray-300">Tech talks and webinars by industry specialists</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-[#02235f] rounded-full"></div>
+              <span className="text-gray-700 dark:text-gray-300">Seminars and hands-on training sessions</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-[#FD4101] rounded-full"></div>
+              <span className="text-gray-700 dark:text-gray-300">Hackathons and coding competitions</span>
+            </li>
+            <li className="flex items-center space-x-3">
+              <div className="w-2 h-2 bg-[#02235f] rounded-full"></div>
+              <span className="text-gray-700 dark:text-gray-300">Professional and educational growth programs</span>
+            </li>
+          </ul>
+        </div>
+                <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white dark:bg-gray-700 border-2 border-[#02235f]/20 rounded-xl p-4 text-center">
+            <GraduationCap className="w-8 h-8 text-[#02235f] mx-auto mb-2" />
+            <div className="text-lg font-bold text-[#02235f] dark:text-[#FD4101]">Academic</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Excellence</div>
+          </div>
+          <div className="bg-white dark:bg-gray-700 border-2 border-[#FD4101]/20 rounded-xl p-4 text-center">
+            <Code className="w-8 h-8 text-[#FD4101] mx-auto mb-2" />
+            <div className="text-lg font-bold text-[#FD4101]">Technical</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Innovation</div>
+          </div>
+        </div>
+        
+
+      </div>
+
+      <div className="space-y-6 lg:space-y-8">
+      <div className="bg-[#ffffff] rounded-2xl p-8 text-[#02235f] text-center relative overflow-hidden shadow-lg border-[#02235f]/30 border-2" >
+  {/* Both Logos displayed above content */}
+  <div className="flex items-center justify-center gap-8 mb-9">
+    <img 
+        
+      src={ruh}
+      alt="University of Ruhuna" 
+      className="object-contain w-48 h-32 "
+    
+   
+      
+    />
+    <div className="w-px h-12 bg-white/30"></div>
+<img
+   src={cssc}
+      alt="CSSC Logo" 
+      className="object-contain w-64 h-48 mr-4"
+/>
+  </div>
+  
+  {/* Main Content */}
+  <div className="relative z-10">
+    
+    <div className="text-5xl font-bold ">450+</div>
+    <div className="mb-2 text-3xl font-bold"> Active Members</div>
+    
+    <p className="mt-4 text-blue-600">
+      One of the most outstanding societies at the University of Ruhuna
+    </p>
+  </div>
+</div>
+
+        <div className="grid grid-cols-2 gap-4">
+   <div className="p-4 text-center bg-white border-2 dark:bg-gray-700 border-purple-500/20 rounded-xl">
+    <Users className="w-8 h-8 mx-auto mb-2 text-purple-500" />
+    <div className="text-lg font-bold text-purple-500">Community</div>
+    <div className="text-sm text-gray-600 dark:text-gray-300">Collaboration</div>
+  </div>
+  <div className="p-4 text-center bg-white border-2 dark:bg-gray-700 border-green-500/20 rounded-xl">
+    <Trophy className="w-8 h-8 mx-auto mb-2 text-green-500" />
+    <div className="text-lg font-bold text-green-500">Leadership</div>
+    <div className="text-sm text-gray-600 dark:text-gray-300">Development</div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Past Events Section */}
+  <section className="mb-16">
+    <div className="mb-12 text-center">
+      <h2 className="text-4xl font-bold text-[#02235f] dark:text-[#FD4101] mb-4">Past Events</h2>
+      <div className="w-24 h-1 bg-[#FD4101] mx-auto rounded-full"></div>
+    </div>
+
+    <div className="mb-8">
+      <div className="bg-gradient-to-r from-[#02235f]/10 to-[#FD4101]/10 dark:from-[#02235f]/20 dark:to-[#FD4101]/20 rounded-2xl p-6 font-medium">
+        <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Hackathons</h3>
+        <p className="mb-4 text-gray-700 dark:text-gray-200">
+        Our community is renowned for spearheading events like the <strong>Rush Coder</strong> - the intra university hackathon 
+        and the latest <strong>Insurgex 1.0</strong> - the intra university hackathon, which expanded our horizons.
+        </p>
+        <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Special Collaborations</h3>
+        <p className="mb-4 text-gray-700 dark:text-gray-200">
+          In collaboration with the <strong>Google Developers Group</strong>, we offered top-tier workshops. 
+        </p>
+        <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-1">Cultural Events</h3>
+        <p className="mb-4 text-gray-700 dark:text-gray-200">
+         Our cultural flair is showcased in <strong>"Padura,"</strong> an event blending creativity with the arts.
+        </p>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {pastEvents.map((event, index) => (
+        <div 
+          key={event.id}
+          className="overflow-hidden transition-all duration-300 bg-white shadow-lg dark:bg-gray-700 rounded-2xl hover:shadow-xl hover:scale-105"
+          style={{ animationDelay: `${index * 100}ms` }}
+        >
+          <div className="relative">
+            <img 
+              src={event.image} 
+              alt={event.title}
+              className="object-cover w-full h-48"
+            />
+            <div className="absolute top-4 right-4">
+              <span className={`px-3 py-1 text-xs font-semibold rounded-full text-white ${
+                event.category === 'Hackathon' ? 'bg-[#FD4101]' :
+                event.category === 'Workshop' ? 'bg-[#02235f]' :
+                event.category === 'Cultural' ? 'bg-purple-500' :
+                event.category === 'Competition' ? 'bg-green-500' :
+                event.category === 'Outreach' ? 'bg-blue-500' :
+                'bg-gray-500'
+              }`}>
+                {event.category}
+              </span>
+            </div>
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold text-[#02235f] dark:text-[#FD4101] mb-3">{event.title}</h3>
+            <p className="font-normal leading-relaxed text-gray-600 dark:text-gray-300">{event.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Photo Gallery 
+  <div className="grid grid-cols-1 gap-4 mt-8 bg-gray-200 rounded-lg md:grid-cols-3 dark:bg-gray-800">
+    <div className="grid grid-rows-2 gap-4">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={cs1}
+          alt="CSSC Event 1"
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={cs2}
+          alt="CSSC Event 2"
+          className="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+
+    <div className="grid grid-rows-3 gap-4">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={cs3}
+          alt="CSSC Event 3"
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={cs4}
+          alt="CSSC Event 4"
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={cs7}
+          alt="CSSC Event 7"
+          className="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+
+    <div className="grid grid-rows-2 gap-4">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={cs6}
+          alt="CSSC Event 6"
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={cs5}
+          alt="CSSC Event 5"
+          className="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+  </div>*/}
+</div>
       );
 
     case "profiles":
