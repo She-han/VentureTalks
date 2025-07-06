@@ -462,7 +462,7 @@ discuss this further with you at your convenience.
                   <div>
                     <label className="flex items-center mb-3 text-sm font-semibold text-gray-700 dark:text-gray-300">
                       <Calendar className="w-4 h-4 mr-2 text-purple-600" />
-                      Select Your Available Dates from October 2025 onwards (up to 5)
+                      Select your available dates from October 2025 onwards (up to 5)
                     </label>
                     <div className="relative">
                       <DatePicker
