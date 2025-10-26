@@ -453,6 +453,7 @@ const Explore = () => {
                         selected={null}
                         onChange={handleDateSelect}
                          minDate={new Date(2025, 10, 9)}
+                         maxDate={new Date(2025, 11, 31)}
                         placeholderText="Click to select multiple dates"
                         dateFormat="EEEE, MMMM d, yyyy"
                         className="w-full p-4 font-normal transition-all duration-300 border border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent"
